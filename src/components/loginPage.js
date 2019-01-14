@@ -19,15 +19,18 @@ class LoginPage extends Component {
   }
 
   render() {
+    let props = this.props.response;
     let isSuccess, message;
 
-    if (this.props.response.login.hasOwnProperty('response')) {
-      isSuccess = this.props.response.login.response.success;
-      message = this.props.response.login.response.message;
+    if (props.login.hasOwnProperty('response')) {
+      isSuccess = props.login.response.success;
+      message = props.login.response.message;
       
       if (isSuccess) {
         localStorage.removeItem('token');
-        localStorage.setItem('token', this.props.response.login.response.token);
+        localStorage.removeItem('role');
+        localStorage.setItem('token', props.login.response.token);
+        localStorage.setItem('role', props.login.response.role);
       }
     }
 

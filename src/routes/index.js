@@ -21,11 +21,20 @@ function requireAuth(nextState, replace) {
   }
 }
 
+function isUserAuthenticated(nextState, replace) {
+  console.log(isLoggedIn());
+  if (isLoggedIn()) {
+    replace({
+      pathname: '/dashboard'
+    });
+  }
+}
+
 export default (
   <Route path='/' component={App}>
-    <IndexRoute component={LoginPage} />
-    <Route path='login' component={LoginPage} />
-    <Route path='register' component={RegisterPage} />
+    <IndexRoute component={LoginPage} onEnter={isUserAuthenticated} />
+    <Route path='login' component={LoginPage} onEnter={isUserAuthenticated} />
+    <Route path='register' component={RegisterPage} onEnter={isUserAuthenticated} />
     <Route path='dashboard' component={DashboardPage} onEnter={requireAuth} />
   </Route>
 );

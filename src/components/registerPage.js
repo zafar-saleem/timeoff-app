@@ -21,7 +21,7 @@ class RegisterPage extends Component {
 
   render() {
     let message, isSuccess;
-
+    console.log(this.props);
     if (this.props.response.register.hasOwnProperty('response')) {
       isSuccess = this.props.response.register.response.success;
       message = this.props.response.register.response.message;
