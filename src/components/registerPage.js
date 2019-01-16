@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { registerUserAction } from '../actions/authenticationActions';
+import RegisterView from '../views/registerView';
 
 class RegisterPage extends Component {
+  isSuccess;
+  message;
+
   onHandleRegistration = (event) => {
     event.preventDefault();
 
@@ -19,41 +23,25 @@ class RegisterPage extends Component {
     this.props.dispatch(registerUserAction(data));
   }
 
-  render() {
-    let message, isSuccess;
-    
+  setRegistrationProperties = () => {
     if (this.props.response.register.hasOwnProperty('response')) {
-      isSuccess = this.props.response.register.response.success;
-      message = this.props.response.register.response.message;
-    }
+      this.isSuccess = this.props.response.register.response.success;
+      this.message = this.props.response.register.response.message;
 
-    if (isSuccess) {
+      this.props.response.register.response.success = false;
+      this.props.response.register.response.message = null;
+    }
+  }
+
+  render() {
+    this.setRegistrationProperties();
+
+    if (this.isSuccess) {
       return <Redirect to='/login' />;
     }
     
     return (
-      <div>
-        <h3>RegisterPage</h3>
-        {(!isSuccess) ? <div>{message}</div> : null}
-        <form onSubmit={this.onHandleRegistration}>
-          <div>
-            <label>Name</label>
-            <input type="text" name="name" />
-          </div>
-          <div>
-            <label>Email</label>
-            <input type="email" name="email" />
-          </div>
-          <div>
-            <label>Password</label>
-            <input type="password" name="password" />
-          </div>
-          <div>
-            <button>Register</button>
-          </div>
-        </form>
-        Already have account? <Link to='login'>Login here</Link>
-      </div>
+      <RegisterView handleRegistration={this.onHandleRegistration} message={this.message} success={this.isSuccess} />
     )
   }
 }

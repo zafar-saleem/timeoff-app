@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-class LoginView extends Component {
+class RegisterView extends Component {
   render() {
     return (
       <div>
-        <h3>Login Page</h3>
-        {(!this.props.isSuccess) ? <div>{this.props.message}</div> : null}
-        <form onSubmit={this.props.handleLogin}>
+        <h3>RegisterPage</h3>
+        {(!this.props.success) ? <div>{this.props.message}</div> : null}
+        <form onSubmit={this.props.handleRegistration}>
+          <div>
+            <label>Name</label>
+            <input type="text" name="name" />
+          </div>
           <div>
             <label>Email</label>
             <input type="email" name="email" />
@@ -18,13 +22,13 @@ class LoginView extends Component {
             <input type="password" name="password" />
           </div>
           <div>
-            <button>Login</button>
+            <button>Register</button>
           </div>
         </form>
-        Don't have account? <Link to="register">Register here</Link>
+        Already have account? <Link to='login'>Login here</Link>
       </div>
     );
   }
 }
 
-export default connect()(LoginView);
+export default connect()(RegisterView);

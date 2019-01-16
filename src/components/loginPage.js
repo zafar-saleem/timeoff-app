@@ -25,7 +25,7 @@ class LoginPage extends Component {
     this.props.dispatch(loginUserAction(data));
   }
 
-  setLoginItems = () => {
+  setLoginProperties = () => {
     if (this.props.response.login.hasOwnProperty('response')) {
       if (this.props.response.login.response.success) {
         this.isSuccess = this.props.response.login.response.success;
@@ -39,8 +39,8 @@ class LoginPage extends Component {
   }
 
   render() {
-    this.setLoginItems();
-    
+    this.setLoginProperties();
+
     if (this.isSuccess) {
       return <Redirect to='/dashboard' />;
     }
