@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { instanceOf } from 'prop-types';
 import { connect } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 
+import { setCookie, getCookie, checkCookie } from '../utils/cookies';
 import { loginUserAction } from '../actions/authenticationActions';
 
 class LoginPage extends Component {
+
   onHandleLogin = (event) => {
     event.preventDefault();
 
@@ -27,10 +30,10 @@ class LoginPage extends Component {
       message = props.login.response.message;
       
       if (isSuccess) {
-        localStorage.removeItem('token');
-        localStorage.removeItem('role');
-        localStorage.setItem('token', props.login.response.token);
-        localStorage.setItem('role', props.login.response.role);
+        setCookie('token', props.login.response.token);
+        setCookie('role', props.login.response.role);
+
+        // console.log(getCookie('token'));
       }
     }
 
