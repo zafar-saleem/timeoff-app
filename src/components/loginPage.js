@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { instanceOf } from 'prop-types';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
-import { setCookie, getCookie, checkCookie } from '../utils/cookies';
+import { setCookie } from '../utils/cookies';
 import { loginUserAction } from '../actions/authenticationActions';
+import LoginView from '../views/loginView';
 
 class LoginPage extends Component {
+
+  properties;
+  isSuccess;
+  message;
 
   onHandleLogin = (event) => {
     event.preventDefault();
@@ -21,45 +25,28 @@ class LoginPage extends Component {
     this.props.dispatch(loginUserAction(data));
   }
 
-  render() {
-    let props = this.props.response;
-    let isSuccess, message;
+  setLoginItems = () => {
+    if (this.props.response.login.hasOwnProperty('response')) {
+      if (this.props.response.login.response.success) {
+        this.isSuccess = this.props.response.login.response.success;
 
-    if (props.login.hasOwnProperty('response')) {
-      isSuccess = props.login.response.success;
-      message = props.login.response.message;
-      
-      if (isSuccess) {
-        setCookie('token', props.login.response.token);
-        setCookie('role', props.login.response.role);
-
-        // console.log(getCookie('token'));
+        setCookie('token', this.props.response.login.response.token);
+        setCookie('role', this.props.response.login.response.role);
+      } else {
+        this.message = this.props.response.login.response.message;
       }
     }
+  }
 
-    if (isSuccess) {
+  render() {
+    this.setLoginItems();
+    
+    if (this.isSuccess) {
       return <Redirect to='/dashboard' />;
     }
 
     return (
-      <div>
-        <h3>Login Page</h3>
-        {(!isSuccess) ? <div>{message}</div> : null}
-        <form onSubmit={this.onHandleLogin}>
-          <div>
-            <label>Email</label>
-            <input type="email" name="email" />
-          </div>
-          <div>
-            <label>Password</label>
-            <input type="password" name="password" />
-          </div>
-          <div>
-            <button>Login</button>
-          </div>
-        </form>
-        Don't have account? <Link to="register">Register here</Link>
-      </div>
+      <LoginView handleLogin={this.onHandleLogin} success={this.isSuccess} message={this.message} />
     );
   }
 }
