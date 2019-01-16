@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { registerUserAction } from '../actions/authenticationActions';
 import RegisterView from '../views/registerView';
 
-class RegisterPage extends Component {
+class RegisterComponent extends Component {
   isSuccess;
   message;
 
@@ -50,4 +50,4 @@ const mapStateToProps = (response) => ({
   response
 });
 
-export default connect(mapStateToProps)(RegisterPage);
+export default connect(mapStateToProps)(RegisterComponent);

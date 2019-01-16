@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 
-class LogoutPage extends Component {
+class LogoutComponent extends Component {
   logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('role');
@@ -32,4 +32,4 @@ class LogoutPage extends Component {
   }
 }
 
-export default LogoutPage;
+export default LogoutComponent;

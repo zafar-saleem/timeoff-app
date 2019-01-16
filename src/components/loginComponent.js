@@ -6,7 +6,7 @@ import { setCookie } from '../utils/cookies';
 import { loginUserAction } from '../actions/authenticationActions';
 import LoginView from '../views/loginView';
 
-class LoginPage extends Component {
+class LoginComponent extends Component {
 
   properties;
   isSuccess;
@@ -53,4 +53,4 @@ class LoginPage extends Component {
 
 const mapStateToProps = (response) => ({response});
 
-export default connect(mapStateToProps)(LoginPage);
+export default connect(mapStateToProps)(LoginComponent);

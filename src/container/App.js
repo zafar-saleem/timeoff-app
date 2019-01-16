@@ -5,9 +5,9 @@ import {
   Switch
 } from 'react-router-dom';
 
-import LoginPage from '../components/loginPage';
-import RegisterPage from '../components/registerPage';
-import DashboardPage from '../components/dashboardPage';
+import LoginComponent from '../components/loginComponent';
+import RegisterComponent from '../components/registerComponent';
+import DashboardComponent from '../components/dashboardComponent';
 
 class App extends Component {
   render() {
@@ -18,9 +18,9 @@ class App extends Component {
             <h3>User Authentication System</h3>
           </div>
           <Switch>
-            <Route path='/' exact={true} component={LoginPage} />
-            <Route path='/login' component={LoginPage} />
-            <Route path='/register' component={RegisterPage} />
+            <Route path='/' exact={true} component={LoginComponent} />
+            <Route path='/login' component={LoginComponent} />
+            <Route path='/register' component={RegisterComponent} />
           </Switch>
         </div>
       </BrowserRouter>
