@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { registerUserAction } from '../actions/authenticationActions';
@@ -21,16 +21,20 @@ class RegisterPage extends Component {
 
   render() {
     let message, isSuccess;
-    console.log(this.props);
+    
     if (this.props.response.register.hasOwnProperty('response')) {
       isSuccess = this.props.response.register.response.success;
       message = this.props.response.register.response.message;
+    }
+
+    if (isSuccess) {
+      return <Redirect to='/login' />;
     }
     
     return (
       <div>
         <h3>RegisterPage</h3>
-        {!isSuccess ? <div>{message}</div> : browserHistory.push('login')}
+        {(!isSuccess) ? <div>{message}</div> : null}
         <form onSubmit={this.onHandleRegistration}>
           <div>
             <label>Name</label>

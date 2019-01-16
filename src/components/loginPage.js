@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
 import { connect } from 'react-redux';
+import { Link, Redirect } from 'react-router-dom';
 
 import { loginUserAction } from '../actions/authenticationActions';
 
@@ -34,10 +34,14 @@ class LoginPage extends Component {
       }
     }
 
+    if (isSuccess) {
+      return <Redirect to='/dashboard' />;
+    }
+
     return (
       <div>
         <h3>Login Page</h3>
-        {!isSuccess ? <div>{message}</div> : browserHistory.push('dashboard')}
+        {(!isSuccess) ? <div>{message}</div> : null}
         <form onSubmit={this.onHandleLogin}>
           <div>
             <label>Email</label>
@@ -51,7 +55,7 @@ class LoginPage extends Component {
             <button>Login</button>
           </div>
         </form>
-        Don't have account? <Link to='register'>Register here</Link>
+        Don't have account? <Link to="register">Register here</Link>
       </div>
     );
   }
