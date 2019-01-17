@@ -1,16 +1,16 @@
 export function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
+  let d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  var expires = 'expires='+d.toUTCString();
+  let expires = 'expires='+d.toUTCString();
   document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/';
 }
 
 export function getCookie(cname) {
-  var name = cname + '=';
-  var ca = document.cookie.split(';');
+  let name = cname + '=';
+  let ca = document.cookie.split(';');
   
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
     }
@@ -23,13 +23,10 @@ export function getCookie(cname) {
 }
 
 export function checkCookie() {
-  var user = getCookie('username');
+  let user = getCookie('token');
   if (user != '') {
-    alert('Welcome again ' + user);
+    return user;
   } else {
-    user = prompt('Please enter your name:', '');
-    if (user != '' && user != null) {
-      setCookie('username', user, 365);
-    }
+    return null;
   }
 }
