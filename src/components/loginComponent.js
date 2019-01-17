@@ -28,6 +28,9 @@ class LoginComponent extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.response.login.hasOwnProperty('response')) {
       if (nextProps.response.login.response.success !== prevState.isSuccess) {
+        setCookie('token', nextProps.response.login.response.token);
+        setCookie('role', nextProps.response.login.response.role);
+
         return {
           isSuccess: nextProps.response.login.response.success,
           message: nextProps.response.login.response.message
@@ -44,7 +47,7 @@ class LoginComponent extends Component {
   }
 
   render() {
-    if (this.isSuccess) {
+    if (this.state.isSuccess) {
       return <Redirect to='/dashboard' />;
     }
 
