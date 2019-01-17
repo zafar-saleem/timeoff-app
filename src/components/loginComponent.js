@@ -15,11 +15,11 @@ class LoginComponent extends Component {
   onHandleLogin = (event) => {
     event.preventDefault();
 
-    let email = event.target.email.value;
+    let username = event.target.username.value;
     let password = event.target.password.value;
 
     const data = {
-      email, password
+      username, password
     };
 
     this.props.dispatch(loginUserAction(data));

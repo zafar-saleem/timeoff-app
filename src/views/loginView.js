@@ -7,8 +7,8 @@ const LoginView = (props) => (
     {(!props.isSuccess) ? <div>{props.message}</div> : null}
     <form onSubmit={props.handleLogin}>
       <div>
-        <label>Email</label>
-        <input type="email" name="email" />
+        <label>Username</label>
+        <input type="text" name="username" />
       </div>
       <div>
         <label>Password</label>
