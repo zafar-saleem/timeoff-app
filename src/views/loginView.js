@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+import { checkCookie } from '../utils/cookies';
 
 const LoginView = (props) => (
   <div>
+    {(checkCookie() !== null) ? <Redirect to='/dashboard' /> : null}
     <h3>Login Page</h3>
     {(!props.isSuccess) ? <div>{props.message}</div> : null}
     <form onSubmit={props.handleLogin}>

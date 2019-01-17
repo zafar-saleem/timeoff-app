@@ -1,32 +1,19 @@
 import React, { Component } from 'react';
-import { browserHistory } from 'react-router';
+import { Redirect } from 'react-router-dom';
+import { getCookie, deleteCookies, setCookie } from '../utils/cookies';
 
 class LogoutComponent extends Component {
-  logout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('role');
-
-    if (localStorage.getItem('token')) {
-      console.log(true);
-      return true;
-    }
-
-    console.log(false);
-    return false;
-  }
-
   constructor() {
     super();
-    localStorage.removeItem('token');
-    localStorage.removeItem('role'); 
+    setCookie('token', getCookie('token'), 0);
+    setCookie('role', getCookie('role'), 0);
   }
 
   render() {
-    console.log(localStorage.getItem('token'));
     return (
       <div>
         <p>Logging you out...</p>
-        {(localStorage.getItem('token') == null) ? browserHistory.push('/login') : browserHistory.push('/dashboard')}
+        {(getCookie('token') == null) ? <Redirect to='/' /> : <Redirect to='dashboard' />}
       </div>
     );
   }

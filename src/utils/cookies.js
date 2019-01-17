@@ -30,3 +30,12 @@ export function checkCookie() {
     return null;
   }
 }
+
+export function deleteCookies() {
+  console.log(getCookie('token'));
+  let token = getCookie('token');
+
+  document.cookie = token + '=; Max-Age=-99999999;';
+  // document.cookie = getCookie('role') + '=; Max-Age=-99999999;';
+  console.log(getCookie('token'));
+}
