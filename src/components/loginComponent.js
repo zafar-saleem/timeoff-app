@@ -7,10 +7,10 @@ import { loginUserAction } from '../actions/authenticationActions';
 import LoginView from '../views/loginView';
 
 class LoginComponent extends Component {
-
-  properties;
-  isSuccess;
-  message;
+  state = {
+    isSuccess: false,
+    message: ''
+  };
 
   onHandleLogin = (event) => {
     event.preventDefault();
@@ -25,28 +25,31 @@ class LoginComponent extends Component {
     this.props.dispatch(loginUserAction(data));
   }
 
-  setLoginProperties = () => {
-    if (this.props.response.login.hasOwnProperty('response')) {
-      if (this.props.response.login.response.success) {
-        this.isSuccess = this.props.response.login.response.success;
-
-        setCookie('token', this.props.response.login.response.token);
-        setCookie('role', this.props.response.login.response.role);
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.response.login.hasOwnProperty('response')) {
+      if (nextProps.response.login.response.success !== prevState.isSuccess) {
+        return {
+          isSuccess: nextProps.response.login.response.success,
+          message: nextProps.response.login.response.message
+        };
       } else {
-        this.message = this.props.response.login.response.message;
+        return {
+          isSuccess: nextProps.response.login.response.success,
+          message: nextProps.response.login.response.message
+        };
       }
+    } else {
+      return null;
     }
   }
 
   render() {
-    this.setLoginProperties();
-
     if (this.isSuccess) {
       return <Redirect to='/dashboard' />;
     }
 
     return (
-      <LoginView handleLogin={this.onHandleLogin} success={this.isSuccess} message={this.message} />
+      <LoginView handleLogin={this.onHandleLogin} success={this.state.isSuccess} message={this.state.message} />
     );
   }
 }

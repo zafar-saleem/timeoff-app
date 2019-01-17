@@ -7,7 +7,7 @@ import {
 
 import LoginComponent from '../components/loginComponent';
 import RegisterComponent from '../components/registerComponent';
-import DashboardComponent from '../components/dashboardComponent';
+import DashboardComponent from '../components/admin/dashboardComponent';
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <div>
-            <h3>User Authentication System</h3>
+            <h3>Welcome to System</h3>
           </div>
           <Switch>
             <Route path='/' exact={true} component={LoginComponent} />

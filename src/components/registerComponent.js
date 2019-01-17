@@ -6,8 +6,10 @@ import { registerUserAction } from '../actions/authenticationActions';
 import RegisterView from '../views/registerView';
 
 class RegisterComponent extends Component {
-  isSuccess;
-  message;
+  state = {
+    isSuccess: false,
+    message: ''
+  }
 
   onHandleRegistration = (event) => {
     event.preventDefault();
@@ -23,25 +25,31 @@ class RegisterComponent extends Component {
     this.props.dispatch(registerUserAction(data));
   }
 
-  setRegistrationProperties = () => {
-    if (this.props.response.register.hasOwnProperty('response')) {
-      this.isSuccess = this.props.response.register.response.success;
-      this.message = this.props.response.register.response.message;
-
-      this.props.response.register.response.success = false;
-      this.props.response.register.response.message = null;
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.response.register.hasOwnProperty('response')) {
+      if (nextProps.response.register.response.success !== prevState.isSuccess) {
+        return {
+          isSuccess: nextProps.response.register.response.success,
+          message: nextProps.response.register.response.message
+        };
+      } else {
+        return {
+          isSuccess: nextProps.response.register.response.success,
+          message: nextProps.response.register.response.message
+        };
+      }
+    } else {
+      return null;
     }
   }
 
   render() {
-    this.setRegistrationProperties();
-
-    if (this.isSuccess) {
+    if (this.state.isSuccess) {
       return <Redirect to='/login' />;
     }
     
     return (
-      <RegisterView handleRegistration={this.onHandleRegistration} message={this.message} success={this.isSuccess} />
+      <RegisterView handleRegistration={this.onHandleRegistration} message={this.state.message} success={this.state.isSuccess} />
     )
   }
 }
