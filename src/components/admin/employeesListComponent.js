@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-
 import HeaderComponent from '../commons/headerComponent';
 
-class DashboardComponent extends Component {
+class EmplyeesListComponent extends Component {
   render() {
     return (
       <div>
         <HeaderComponent />
+        Employees List
       </div>
     );
   }
 }
 
-export default connect()(DashboardComponent);
+export default EmplyeesListComponent;

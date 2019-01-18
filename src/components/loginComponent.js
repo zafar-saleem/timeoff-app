@@ -30,6 +30,7 @@ class LoginComponent extends Component {
       if (nextProps.response.login.response.success !== prevState.isSuccess) {
         setCookie('token', nextProps.response.login.response.token);
         setCookie('role', nextProps.response.login.response.role);
+        setCookie('id', nextProps.response.login.response.id);
 
         return {
           isSuccess: nextProps.response.login.response.success,
@@ -48,7 +49,7 @@ class LoginComponent extends Component {
 
   render() {
     if (this.state.isSuccess) {
-      return <Redirect to='/dashboard' />;
+      return <Redirect to='/admin/dashboard' />;
     }
 
     return (
