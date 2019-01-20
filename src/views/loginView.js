@@ -4,7 +4,7 @@ import { checkCookie } from '../utils/cookies';
 
 const LoginView = (props) => (
   <div>
-    {(checkCookie() !== null) ? <Redirect to='/dashboard' /> : null}
+    {(checkCookie() !== null) ? <Redirect to='/admin/dashboard' /> : null}
     <h3>Login Page</h3>
     {(!props.isSuccess) ? <div>{props.message}</div> : null}
     <form onSubmit={props.handleLogin}>
