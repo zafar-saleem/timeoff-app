@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EmployeesListView = (props) => {
   if (props.list == undefined) {
@@ -8,7 +9,7 @@ const EmployeesListView = (props) => {
   return (
     <div>
       {props.list.map(li => (
-        <table>
+        <table key={li._id}>
           <thead>
             <tr>
               <th>Name</th>
@@ -19,7 +20,7 @@ const EmployeesListView = (props) => {
           <tbody>
             <tr>
               <td>
-                {li.name}
+                <Link to={`/employee/details/${li._id}`}>{li.name}</Link>
               </td>
               <td>
                 {li.position}

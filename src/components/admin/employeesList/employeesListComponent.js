@@ -21,7 +21,7 @@ class EmplyeesListComponent extends Component {
     return (
       <div>
         <HeaderComponent />
-        <EmployeesListView 
+        <EmployeesListView
           list={this.props.response.employeesList.response} />
       </div>
     );

@@ -38,5 +38,7 @@ export const fetchEmployeesService = () => {
     })
     .then(json => {
       return json;
+    }).catch(error => {
+      console.log(error);
     });
 }

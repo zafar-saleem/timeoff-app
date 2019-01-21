@@ -16,6 +16,8 @@ import EmployeesListComponent from '../components/admin/employeesList/employeesL
 import EmployeeScheduleComponent from '../components/admin/employeeSchedule/employeeScheduleComponent';
 import addEmployeeComponent from '../components/admin/addEmployee/addEmployeeComponent';
 
+import employeeDetailsComponent from '../components/employees/details/employeeDetailsComponent';
+
 import { checkCookie } from '../utils/cookies';
 
 class App extends Component {
@@ -35,6 +37,8 @@ class App extends Component {
             <PrivateRoute path='/admin/list' component={EmployeesListComponent} />
             <PrivateRoute path='/admin/schedule' component={EmployeeScheduleComponent} />
             <PrivateRoute path='/admin/new' component={addEmployeeComponent} />
+
+            <PrivateRoute path='/employee/details/:id' component={employeeDetailsComponent} />
           </Switch>
         </div>
       </BrowserRouter>
