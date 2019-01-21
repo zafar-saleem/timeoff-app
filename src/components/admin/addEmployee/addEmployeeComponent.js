@@ -23,8 +23,10 @@ class NewEmployeeComponent extends Component {
 
     const data = {
       name, role, position, username, password,
-      access: getCookie('role'),
-      id: getCookie('id')
+      admin: {
+        access: getCookie('role'),
+        id: getCookie('id')
+      }
     };
 
     this.props.dispatch(saveEmployeeAction(data));

@@ -18,7 +18,7 @@ const AddEmployeeView = (props) => (
       </div>
       <div>
         <label>Password</label>
-        <input type="text" name="password" />
+        <input type="password" name="password" />
       </div>
       <div>
         <label>Role</label>

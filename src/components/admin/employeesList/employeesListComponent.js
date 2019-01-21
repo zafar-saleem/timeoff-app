@@ -4,10 +4,16 @@ import { connect } from 'react-redux';
 
 import { employeesListAction } from '../../../actions/adminActions';
 import EmployeesListView from './employeesListView';
+import { getCookie } from '../../../utils/cookies';
 
 class EmplyeesListComponent extends Component {
   constructor(props) {
     super(props);
+    const data = {
+      id: getCookie('id'),
+      access: getCookie('role')
+    };
+
     this.props.dispatch(employeesListAction());
   }
 
