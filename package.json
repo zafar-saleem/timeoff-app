@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
+    "react-calendar": "^2.18.0",
     "react-cookie": "^3.0.8",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
