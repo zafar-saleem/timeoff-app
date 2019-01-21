@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import { checkCookie } from '../utils/cookies';
+import { checkCookie } from '../../../utils/cookies';
 
 const LoginView = (props) => (
   <div>
@@ -20,7 +20,6 @@ const LoginView = (props) => (
         <button>Login</button>
       </div>
     </form>
-    Don't have account? <Link to="register">Register here</Link>
   </div>
 );
 

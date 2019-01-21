@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import HeaderComponent from '../commons/headerComponent';
+import HeaderComponent from '../../commons/headerComponent';
 import { connect } from 'react-redux';
 
-import { employeesListAction } from '../../actions/adminActions';
-import EmployeesListView from '../../views/employeesListView';
+import { employeesListAction } from '../../../actions/adminActions';
+import EmployeesListView from './employeesListView';
 
 class EmplyeesListComponent extends Component {
   constructor(props) {

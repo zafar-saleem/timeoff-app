@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { registerUserAction } from '../actions/authenticationActions';
-import RegisterView from '../views/registerView';
+import { registerUserAction } from '../../../actions/authenticationActions';
+import RegisterView from '../registerView';
 
 class RegisterComponent extends Component {
   state = {

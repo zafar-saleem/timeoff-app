@@ -6,16 +6,15 @@ import {
 } from 'react-router-dom';
 
 import PrivateRoute from './privateRoute';
-import LoginComponent from '../components/loginComponent';
-import LogoutComponent from '../components/logoutComponent';
-import RegisterComponent from '../components/registerComponent';
-import DashboardComponent from '../components/admin/dashboardComponent';
+import LoginComponent from '../components/authentications/login/loginComponent';
+import LogoutComponent from '../components/authentications/logoutComponent';
+import DashboardComponent from '../components/admin/dashboard/dashboardComponent';
 
 import HeaderComponent from '../components/commons/headerComponent';
-import EmployeeComponent from '../components/admin/employeesComponent';
-import EmployeesListComponent from '../components/admin/employeesListComponent';
-import EmployeeScheduleComponent from '../components/admin/employeeScheduleComponent';
-import addEmployeeComponent from '../components/admin/addEmployeeComponent';
+import EmployeeComponent from '../components/admin/employees/employeesComponent';
+import EmployeesListComponent from '../components/admin/employeesList/employeesListComponent';
+import EmployeeScheduleComponent from '../components/admin/employeeSchedule/employeeScheduleComponent';
+import addEmployeeComponent from '../components/admin/addEmployee/addEmployeeComponent';
 
 import { checkCookie } from '../utils/cookies';
 
@@ -30,7 +29,6 @@ class App extends Component {
           <Switch>
             <Route path='/' exact={true} component={LoginComponent} />
             <Route path='/login' component={LoginComponent} />
-            <Route path='/register' component={RegisterComponent} />
             <PrivateRoute path='/logout' component={LogoutComponent} />
             <PrivateRoute path='/admin/dashboard' component={DashboardComponent} />
             <PrivateRoute path='/admin/employee' component={EmployeeComponent} />

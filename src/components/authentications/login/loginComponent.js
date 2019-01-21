@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { setCookie } from '../utils/cookies';
-import { loginUserAction } from '../actions/authenticationActions';
-import LoginView from '../views/loginView';
+import { setCookie } from '../../../utils/cookies';
+import { loginUserAction } from '../../../actions/authenticationActions';
+import LoginView from './loginView';
 
 class LoginComponent extends Component {
   state = {

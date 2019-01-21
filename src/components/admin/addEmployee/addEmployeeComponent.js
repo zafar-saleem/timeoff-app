@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import HeaderComponent from '../commons/headerComponent';
+import HeaderComponent from '../../commons/headerComponent';
 import { connect } from 'react-redux';
 
-import { saveEmployeeAction } from '../../actions/adminActions';
-import AddEmployeeView from '../../views/addEmployeeView';
-import { getCookie } from '../../utils/cookies';
+import { saveEmployeeAction } from '../../../actions/adminActions';
+import AddEmployeeView from './addEmployeeView';
+import { getCookie } from '../../../utils/cookies';
 
 class NewEmployeeComponent extends Component {
   state = {

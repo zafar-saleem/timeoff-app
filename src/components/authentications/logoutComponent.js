@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { getCookie, deleteCookies, setCookie } from '../utils/cookies';
+import { getCookie, deleteCookies, setCookie } from '../../utils/cookies';
 
 class LogoutComponent extends Component {
   constructor() {
