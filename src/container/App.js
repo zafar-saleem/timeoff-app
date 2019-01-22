@@ -14,9 +14,10 @@ import HeaderComponent from '../components/commons/headerComponent';
 import EmployeeComponent from '../components/admin/employees/employeesComponent';
 import EmployeesListComponent from '../components/admin/employeesList/employeesListComponent';
 import EmployeeScheduleComponent from '../components/admin/employeeSchedule/employeeScheduleComponent';
-import addEmployeeComponent from '../components/admin/addEmployee/addEmployeeComponent';
+import AddEmployeeComponent from '../components/admin/addEmployee/addEmployeeComponent';
 
-import employeeDetailsComponent from '../components/employees/details/employeeDetailsComponent';
+import EmployeeDetailsComponent from '../components/employees/details/employeeDetailsComponent';
+import EmployeeDetailsUpdateComponent from '../components/employees/details/employeeDetailsUpdateComponent';
 
 import { checkCookie } from '../utils/cookies';
 
@@ -36,9 +37,10 @@ class App extends Component {
             <PrivateRoute path='/admin/employee' component={EmployeeComponent} />
             <PrivateRoute path='/admin/list' component={EmployeesListComponent} />
             <PrivateRoute path='/admin/schedule' component={EmployeeScheduleComponent} />
-            <PrivateRoute path='/admin/new' component={addEmployeeComponent} />
+            <PrivateRoute path='/admin/new' component={AddEmployeeComponent} />
 
-            <PrivateRoute path='/employee/details/:id' component={employeeDetailsComponent} />
+            <PrivateRoute path='/employee/details/:id' component={EmployeeDetailsComponent} />
+            <PrivateRoute path='/employee/update/:id' component={EmployeeDetailsUpdateComponent} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -5,7 +5,7 @@ export default function(state = [], action) {
 
   switch(action.type) {
     case types.FETCH_EMPLOYEE_DETAILS_SUCCESS:
-      return { ... state, response };
+      return { ...state, response };
     default:
       return state;
   }
