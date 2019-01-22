@@ -7,6 +7,7 @@ import {
 
 import PrivateRoute from './privateRoute';
 import LoginComponent from '../components/authentications/login/loginComponent';
+import RegisterComponent from '../components/authentications/register/registerComponent';
 import LogoutComponent from '../components/authentications/logoutComponent';
 import DashboardComponent from '../components/admin/dashboard/dashboardComponent';
 
@@ -32,6 +33,7 @@ class App extends Component {
           <Switch>
             <Route path='/' exact={true} component={LoginComponent} />
             <Route path='/login' component={LoginComponent} />
+            <Route path='/register' component={RegisterComponent} />
             <PrivateRoute path='/logout' component={LogoutComponent} />
             <PrivateRoute path='/admin/dashboard' component={DashboardComponent} />
             <PrivateRoute path='/admin/employee' component={EmployeeComponent} />

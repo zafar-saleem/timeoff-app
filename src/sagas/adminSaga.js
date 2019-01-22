@@ -2,7 +2,8 @@ import { call, put } from 'redux-saga/effects';
 import {
   addEmployeeService,
   fetchEmployeesService,
-  fetchEmployeesCountService
+  fetchEmployeesCountService,
+  fetchOnlineEmployeesService
 } from '../services/adminService';
 
 import * as types from '../actions';
@@ -40,5 +41,18 @@ export function* fetchEmployeesCount() {
     ];
   } catch(error) {
     yield put({ type: types.FETCH_TOTAL_EMPLOYEES_SUCCESS, error });
+  }
+}
+
+export function* fetchOnlineEmployees() {
+  try {
+    const response = yield call(fetchOnlineEmployeesService);
+    
+    yield [
+      put({ type: types.FETCH_ONLINE_EMPLOYEES_SUCCESS, response })
+    ];
+
+  } catch(error) {
+    yield put({ type: types.FETCH_ONLINE_EMPLOYEES_SUCCESS, error });
   }
 }

@@ -64,3 +64,23 @@ export const fetchEmployeesCountService = () => {
       return error;
     });
 };
+
+export const fetchOnlineEmployeesService = () => {
+  const FETCH_ONLINE_EMPLOYEES_ENDPOINT = `http://localhost:3000/api/v1/admin/online?id=${getCookie('id')}`;
+
+  const parameters = {
+    method: 'GET',
+    headers: headers
+  };
+
+  return fetch(FETCH_ONLINE_EMPLOYEES_ENDPOINT, parameters)
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      return json;
+    })
+    .catch(error => {
+      return error;
+    });
+};

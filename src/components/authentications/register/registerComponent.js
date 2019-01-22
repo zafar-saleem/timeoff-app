@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { registerUserAction } from '../../../actions/authenticationActions';
-import RegisterView from '../registerView';
+import RegisterView from './registerView';
 
 class RegisterComponent extends Component {
   state = {

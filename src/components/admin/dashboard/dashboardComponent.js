@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import HeaderComponent from '../../commons/headerComponent';
 import CountEmployeesComponent from './countEmployeesComponent';
+import OnlineEmployeesComponent from './onlineEmployeesComponent';
 
 class DashboardComponent extends Component {
   render() {
@@ -11,6 +12,7 @@ class DashboardComponent extends Component {
       <div>
         <HeaderComponent />
         <CountEmployeesComponent />
+        <OnlineEmployeesComponent />
       </div>
     );
   }
