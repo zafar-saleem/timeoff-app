@@ -1,10 +1,10 @@
-import * as types from '../actions';
+import * as types from '../../actions/';
 
 export default function(state = [], action) {
   const response = action.response;
 
   switch(action.type) {
-    case types.FETCH_EMPLOYEE_DETAILS_SUCCESS:
+    case types.FETCH_EMPLOYEES_SUCCESS:
       return { ...state, response };
     default:
       return state;

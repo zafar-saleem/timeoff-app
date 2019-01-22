@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { employeeDetailsAction } from '../../../actions/employeesActions';
 
+import HeaderComponent from '../../commons/headerComponent';
 import EmployeeDetailsUpdateView from './employeeDetailsUpdateView';
 
 class EmployeeDetailsUpdateComponent extends Component {
@@ -19,6 +20,7 @@ class EmployeeDetailsUpdateComponent extends Component {
   render() {
     return (
       <div>
+        <HeaderComponent />
         <EmployeeDetailsUpdateView
           handleUpdateEmployee={this.onHandleUpdateEmployee}
           employee={this.props.response.employeeDetails.response}
