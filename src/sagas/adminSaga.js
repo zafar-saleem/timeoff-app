@@ -3,7 +3,8 @@ import {
   addEmployeeService,
   fetchEmployeesService,
   fetchEmployeesCountService,
-  fetchOnlineEmployeesService
+  fetchOnlineEmployeesService,
+  fetchActivitiesService
 } from '../services/adminService';
 
 import * as types from '../actions';
@@ -56,3 +57,15 @@ export function* fetchOnlineEmployees() {
     yield put({ type: types.FETCH_ONLINE_EMPLOYEES_SUCCESS, error });
   }
 }
+
+export function* fetchActivities() {
+  try {
+    const response = yield call(fetchActivitiesService);
+
+    yield [
+      put({ type: types.FETCH_ACTIVITIES_SUCCESS, response })
+    ];
+  } catch(error) {
+    yield put({ type: types.FETCH_ACTIVITIES_SUCCESS, error });
+  }
+};

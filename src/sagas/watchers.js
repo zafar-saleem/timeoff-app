@@ -4,7 +4,8 @@ import {
   addEmployeeSaga,
   fetchEmployees,
   fetchEmployeesCount,
-  fetchOnlineEmployees
+  fetchOnlineEmployees,
+  fetchActivities
 } from './adminSaga';
 import { fetchEmployeeDetails } from './employeeSaga';
 
@@ -19,4 +20,5 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.FETCH_EMPLOYEE_DETAILS, fetchEmployeeDetails);
   yield takeLatest(types.FETCH_TOTAL_EMPLOYEES, fetchEmployeesCount);
   yield takeLatest(types.FETCH_ONLINE_EMPLOYEES, fetchOnlineEmployees);
+  yield takeLatest(types.FETCH_ACTIVITIES, fetchActivities);
 }

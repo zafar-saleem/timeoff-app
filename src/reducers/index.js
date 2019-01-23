@@ -6,6 +6,7 @@ import employeesList from './admin/employeesListReducer';
 import employeeDetails from './admin/employeeDetailsReducer';
 import count from './admin/countReducer';
 import online from './admin/onlineReducer';
+import activities from './admin/activityReducer';
 
 const rootReducer = combineReducers({
   register,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
   employeesList,
   employeeDetails,
   count,
-  online
+  online,
+  activities
 });
 
 export default rootReducer;

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import HeaderComponent from '../../commons/headerComponent';
 import CountEmployeesComponent from './countEmployeesComponent';
 import OnlineEmployeesComponent from './onlineEmployeesComponent';
+import ActivitiesComponent from './activitiesComponent';
 
 class DashboardComponent extends Component {
   render() {
@@ -13,13 +14,12 @@ class DashboardComponent extends Component {
         <HeaderComponent />
         <CountEmployeesComponent />
         <OnlineEmployeesComponent />
+        <ActivitiesComponent />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-  response: state
-});
+const mapStateToProps = (state) => (state);
 
 export default connect(mapStateToProps)(DashboardComponent);
