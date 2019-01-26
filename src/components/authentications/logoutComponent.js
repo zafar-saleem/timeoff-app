@@ -7,6 +7,7 @@ class LogoutComponent extends Component {
     super();
     setCookie('token', getCookie('token'), 0);
     setCookie('role', getCookie('role'), 0);
+    setCookie('id', getCookie('role'), 0);
   }
 
   render() {
