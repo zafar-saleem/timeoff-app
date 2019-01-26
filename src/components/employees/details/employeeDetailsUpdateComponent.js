@@ -28,7 +28,7 @@ class EmployeeDetailsUpdateComponent extends Component {
     let username = event.target.username.value;
     let password = event.target.password.value;
     let role = event.target.role.value;
-    let _id = this.props.response.employeeDetails.response._id;
+    let _id = this.props.response.details.response._id;
 
     const data = {
       name, position, username, password, role, _id,
@@ -42,17 +42,17 @@ class EmployeeDetailsUpdateComponent extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.response.employeeUpdate.hasOwnProperty('response')) {
-      if (nextProps.response.employeeUpdate.response.success !== prevState.isSuccess) {
+    if (nextProps.response.update.hasOwnProperty('response')) {
+      if (nextProps.response.update.response.success !== prevState.isSuccess) {
         return {
-          isSuccess: nextProps.response.employeeUpdate.response.success,
-          message: nextProps.response.employeeUpdate.response.message,
-          employee: nextProps.response.employeeDetails.response
+          isSuccess: nextProps.response.update.response.success,
+          message: nextProps.response.update.response.message,
+          employee: nextProps.response.details.response
         };
       } else {
         return {
-          isSuccess: nextProps.response.employeeUpdate.response.success,
-          message: nextProps.response.employeeUpdate.response.message
+          isSuccess: nextProps.response.update.response.success,
+          message: nextProps.response.update.response.message
         };
       }
     } else {
@@ -68,7 +68,7 @@ class EmployeeDetailsUpdateComponent extends Component {
           message={this.state.message}
           success={this.state.isSuccess}
           handleUpdateEmployee={this.onHandleUpdateEmployee}
-          employee={this.props.response.employeeDetails.response}
+          employee={this.props.response.details.response}
          />
        </div>
     );

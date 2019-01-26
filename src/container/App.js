@@ -13,8 +13,8 @@ import DashboardComponent from '../components/admin/dashboard/dashboardComponent
 
 import HeaderComponent from '../components/commons/headerComponent';
 import EmployeeComponent from '../components/admin/employees/employeesComponent';
-import EmployeesListComponent from '../components/admin/employeesList/employeesListComponent';
-import EmployeeScheduleComponent from '../components/admin/employeeSchedule/employeeScheduleComponent';
+import EmployeesListComponent from '../components/admin/list/employeesListComponent';
+import EmployeeScheduleComponent from '../components/admin/schedule/employeeScheduleComponent';
 import AddEmployeeComponent from '../components/admin/addEmployee/addEmployeeComponent';
 
 import EmployeeDetailsComponent from '../components/employees/details/employeeDetailsComponent';

@@ -22,7 +22,7 @@ class EmplyeesListComponent extends Component {
       <div>
         <HeaderComponent />
         <EmployeesListView
-          list={this.props.response.employeesList.response} />
+          list={this.props.response.list.response} />
       </div>
     );
   }

@@ -13,7 +13,7 @@ class EmployeeDetailsComponent extends Component {
   }
 
   render() {
-    if (this.props.response.employeeDetails.response === undefined) {
+    if (this.props.response.details.response === undefined) {
       return <div>Loading...</div>
     }
 
@@ -21,7 +21,7 @@ class EmployeeDetailsComponent extends Component {
       <div>
         <HeaderComponent />
         <EmployeeDetailsView 
-          employee={this.props.response.employeeDetails.response}
+          employee={this.props.response.details.response}
         />
       </div>
     );
