@@ -8,6 +8,7 @@ class HeaderComponent extends Component {
         <ul>
           <li><Link to="/admin/list">Employees</Link></li>
           <li><Link to="/admin/new">Add</Link></li>
+          <li><Link to="/admin/dashboard">Dashboard</Link></li>
         </ul>
         <Link to="/logout">Logout</Link>
       </div>
