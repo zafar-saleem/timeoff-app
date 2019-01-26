@@ -1,18 +1,14 @@
 import { getCookie } from '../utils/cookies';
 
-const headers = {
-  'Content-Type': 'application/json',
-  'Authorization': getCookie('token')
-};
-
-const id = getCookie('id');
-
 export const addEmployeeService = (request) => {
   const EMPLOYEE_API_ENDPOINT = 'http://localhost:3000/api/v1/admin/new';
 
   const parameters = {
     method: 'POST',
-    headers: headers,
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getCookie('token')
+    },
     body: JSON.stringify(request)
   };
 
@@ -33,7 +29,10 @@ export const fetchEmployeesService = () => {
 
   const parameters = {
     method: 'GET',
-    headers: headers
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getCookie('token')
+    }
   };
 
   return fetch(FETCH_EMPLOYEES_ENDPOINT, parameters)
@@ -48,11 +47,14 @@ export const fetchEmployeesService = () => {
 };
 
 export const fetchEmployeesCountService = () => {
-  const FETCH_EMPLOYEES_COUNT_ENDPOINT = `http://localhost:3000/api/v1/dashboard/count?id=${id}`;
+  const FETCH_EMPLOYEES_COUNT_ENDPOINT = `http://localhost:3000/api/v1/dashboard/count?id=${getCookie('id')}`;
 
   const parameters = {
     method: 'GET',
-    headers: headers
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getCookie('token')
+    }
   };
 
   return fetch(FETCH_EMPLOYEES_COUNT_ENDPOINT, parameters)
@@ -68,11 +70,14 @@ export const fetchEmployeesCountService = () => {
 };
 
 export const fetchOnlineEmployeesService = () => {
-  const FETCH_ONLINE_EMPLOYEES_ENDPOINT = `http://localhost:3000/api/v1/dashboard/online?id=${id}`;
+  const FETCH_ONLINE_EMPLOYEES_ENDPOINT = `http://localhost:3000/api/v1/dashboard/online?id=${getCookie('id')}`;
 
   const parameters = {
     method: 'GET',
-    headers: headers
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getCookie('token')
+    }
   };
 
   return fetch(FETCH_ONLINE_EMPLOYEES_ENDPOINT, parameters)
@@ -83,16 +88,19 @@ export const fetchOnlineEmployeesService = () => {
       return json;
     })
     .catch(error => {
-      return error;
+      return { error: error };
     });
 };
 
 export const fetchActivitiesService = () => {
-  const FETCH_ACTIVITIES_ENDPOINT = `http://localhost:3000/api/v1/dashboard/activities?id=${id}`;
+  const FETCH_ACTIVITIES_ENDPOINT = `http://localhost:3000/api/v1/dashboard/activities?id=${getCookie('id')}`;
 
   const parameters = {
     method: 'GET',
-    headers: headers
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getCookie('token')
+    }
   }
 
   return fetch(FETCH_ACTIVITIES_ENDPOINT, parameters)
@@ -103,17 +111,6 @@ export const fetchActivitiesService = () => {
       return json;
     })
     .catch(error => {
-      console.log(error);
-      return error;
+      return { error: error };
     })
 };
-
-
-
-
-
-
-
-
-
-
