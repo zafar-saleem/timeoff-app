@@ -3,6 +3,7 @@ import React from 'react';
 const EmployeeDetailsUpdateView = (props) => (
   <div>
     <form onSubmit={props.handleUpdateEmployee}>
+      <div>{(!props.isSuccess) ? <div>{props.message}</div> : null}</div>
       <div>
         <label>Full Name</label>
         <input type="text" name="name" defaultValue={props.employee.name} />

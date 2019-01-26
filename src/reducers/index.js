@@ -4,6 +4,7 @@ import login from './loginReducer';
 import admin from './admin/adminReducer';
 import employeesList from './admin/employeesListReducer';
 import employeeDetails from './admin/employeeDetailsReducer';
+import employeeUpdate from './admin/employeeUpdateReducer';
 import count from './admin/countReducer';
 import online from './admin/onlineReducer';
 import activities from './admin/activityReducer';
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   admin,
   employeesList,
   employeeDetails,
+  employeeUpdate,
   count,
   online,
   activities

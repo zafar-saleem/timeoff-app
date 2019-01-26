@@ -6,3 +6,10 @@ export const employeeDetailsAction = (details) => {
     details
   }
 };
+
+export const employeeUpdateAction = (details) => {
+  return {
+    type: types.UPDATE_EMPLOYEE_DETAILS,
+    details
+  }
+};
