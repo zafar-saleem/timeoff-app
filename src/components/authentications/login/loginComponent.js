@@ -26,12 +26,11 @@ class LoginComponent extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps.response.login);
     if (nextProps.response.login.hasOwnProperty('response')) {
       if (nextProps.response.login.response.success !== prevState.isSuccess) {
-        setCookie('token', nextProps.response.login.response.token);
-        setCookie('role', nextProps.response.login.response.role);
-        setCookie('id', nextProps.response.login.response.id);
+        setCookie('token', nextProps.response.login.response.token, 1);
+        setCookie('role', nextProps.response.login.response.role, 1);
+        setCookie('id', nextProps.response.login.response.id, 1);
 
         return {
           isSuccess: nextProps.response.login.response.success,
