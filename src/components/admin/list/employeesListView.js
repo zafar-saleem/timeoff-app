@@ -6,7 +6,7 @@ const EmployeesListView = (props) => {
     return null;
   }
 
-  if (!props.list.success) {
+  if (!props.list.success && props.list.hasOwnProperty('success')) {
     return <div>{props.list.message}</div>
   }
 
