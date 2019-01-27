@@ -21,9 +21,9 @@ export function* addEmployeeSaga(payload) {
   }
 }
 
-export function* fetchEmployees() {
+export function* fetchEmployees(payload) {
   try {
-    const response = yield call(fetchEmployeesService);
+    const response = yield call(fetchEmployeesService, payload);
     
     yield [
       put({ type: types.FETCH_EMPLOYEES_SUCCESS, response })

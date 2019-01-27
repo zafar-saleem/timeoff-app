@@ -14,10 +14,11 @@ class EmplyeesListComponent extends Component {
       access: getCookie('role')
     };
 
-    this.props.dispatch(employeesListAction());
+    this.props.dispatch(employeesListAction(data));
   }
 
   render() {
+    console.log(this.props);
     return (
       <div>
         <HeaderComponent />

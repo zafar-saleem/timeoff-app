@@ -24,8 +24,11 @@ export const addEmployeeService = (request) => {
     });
 };
 
-export const fetchEmployeesService = () => {
-  const FETCH_EMPLOYEES_ENDPOINT = 'http://localhost:3000/api/v1/admin/list';
+export const fetchEmployeesService = (request) => {
+  let id = request.data.id;
+  let access = request.data.access;
+
+  const FETCH_EMPLOYEES_ENDPOINT = `http://localhost:3000/api/v1/admin/list?id=${id}&access=${access}`;
 
   const parameters = {
     method: 'GET',

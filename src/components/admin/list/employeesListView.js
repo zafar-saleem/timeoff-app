@@ -6,6 +6,10 @@ const EmployeesListView = (props) => {
     return null;
   }
 
+  if (!props.list.success) {
+    return <div>{props.list.message}</div>
+  }
+
   return (
     <div>
       <table>

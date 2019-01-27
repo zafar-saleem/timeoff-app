@@ -7,8 +7,9 @@ export const saveEmployeeAction = (employee) => {
   }
 };
 
-export const employeesListAction = () => {
+export const employeesListAction = (data) => {
   return {
-    type: types.FETCH_EMPLOYEES
+    type: types.FETCH_EMPLOYEES,
+    data
   }
 };

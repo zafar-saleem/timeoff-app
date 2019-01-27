@@ -7,14 +7,23 @@ import CountEmployeesComponent from './countEmployeesComponent';
 import OnlineEmployeesComponent from './onlineEmployeesComponent';
 import ActivitiesComponent from './activitiesComponent';
 
+import { getCookie } from '../../../utils/cookies';
+
 class DashboardComponent extends Component {
   render() {
     return (
       <div>
         <HeaderComponent />
-        <CountEmployeesComponent />
-        <OnlineEmployeesComponent />
-        <ActivitiesComponent />
+        {(getCookie('role') === 'Admin')
+        ?
+        <div>
+          <CountEmployeesComponent />
+          <OnlineEmployeesComponent />
+          <ActivitiesComponent />
+        </div>
+        :
+        <div>CLIEN</div>
+        }
       </div>
     );
   }
