@@ -19,6 +19,8 @@ import AddEmployeeComponent from '../components/admin/addEmployee/addEmployeeCom
 
 import EmployeeDetailsComponent from '../components/employees/details/employeeDetailsComponent';
 import EmployeeDetailsUpdateComponent from '../components/employees/details/employeeDetailsUpdateComponent';
+import HomeComponent from '../components/employees/home/homeComponent';
+import ProfileComponent from '../components/employees/profile/profileComponent';
 
 import { checkCookie } from '../utils/cookies';
 
@@ -43,6 +45,8 @@ class App extends Component {
 
             <PrivateRoute path='/employee/details/:id' component={EmployeeDetailsComponent} />
             <PrivateRoute path='/employee/update/:id' component={EmployeeDetailsUpdateComponent} />
+            <PrivateRoute path='/employee/home' component={HomeComponent} />
+            <PrivateRoute path='/employee/profile' component={ProfileComponent} />
           </Switch>
         </div>
       </BrowserRouter>
