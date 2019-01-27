@@ -6,10 +6,20 @@ import { employeeDetailsAction } from '../../../actions/employeesActions';
 import HeaderComponent from '../../commons/headerComponent';
 import EmployeeDetailsView from './employeeDetailsView';
 
+import { getCookie } from '../../../utils/cookies';
+
 class EmployeeDetailsComponent extends Component {
   constructor(props) {
     super(props);
-    this.props.dispatch(employeeDetailsAction({ employeeID: this.props.match.params.id }));
+    const data = {
+      employeeID: this.props.match.params.id,
+      admin: {
+        id: getCookie('id'),
+        access: getCookie('role')
+      }
+    };
+
+    this.props.dispatch(employeeDetailsAction(data));
   }
 
   render() {
