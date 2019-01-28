@@ -68,7 +68,6 @@ export const setVacationsService = (request) => {
       return response.json();
     })
     .then(json => {
-      console.log(json);
       return json;
     })
     .catch(error => {

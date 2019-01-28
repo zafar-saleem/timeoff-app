@@ -8,7 +8,9 @@ import { setVacationActions } from '../../../actions/employeesActions';
 class HomeComponent extends Component {
   state = {
     startDate: null,
-    endDate: null
+    endDate: null,
+    isSuccess: false,
+    message: ''
   }
 
   onSaveHandle(event) {
@@ -18,23 +20,60 @@ class HomeComponent extends Component {
       startDate: this.state.startDate,
       endDate: this.state.endDate
     };
-    
-    console.log(this.props);
+
     this.props.dispatch(setVacationActions(range));
   }
 
   onChange(date) {
+    let today = new Date();
+
+    if (date[0] > today) {
+      this.setState({
+        startDate: date[0],
+        endDate: date[1]
+      });
+
+      return;
+    }
+
     this.setState({
-      startDate: date[0],
-      endDate: date[1]
+      isSuccess: false,
+      message: 'Please select date in future.'
     });
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.vacations.hasOwnProperty('response')) {
+      if (nextProps.vacations.response.success !== prevState.isSuccess) {
+        return {
+          isSuccess: nextProps.vacations.response.success,
+          message: nextProps.vacations.response.message,
+          employee: nextProps.details.response
+        };
+      } else {
+        return {
+          isSuccess: nextProps.vacations.response.success,
+          message: nextProps.vacations.response.message
+        };
+      }
+    } else {
+      return null;
+    }
+  }
+
   render() {
-    console.log(this.props);
     return (
       <div>
         <HeaderComponent />
+        <div>
+          {
+            (this.state.isSuccess)
+            ?
+            <div>{this.state.message}</div>
+            :
+            <div>{this.state.message}</div>
+          }
+        </div>
         <Calendar
           onChange={this.onChange.bind(this)}
           selectRange={true}
