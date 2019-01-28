@@ -13,3 +13,10 @@ export const employeeUpdateAction = (details) => {
     details
   }
 };
+
+export const setVacationActions = (range) => {
+  return {
+    type: types.SET_VACATIONS,
+    range
+  }
+}

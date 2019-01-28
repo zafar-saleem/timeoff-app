@@ -48,3 +48,34 @@ export const updateEmployeeDetailsService = (request) => {
       return error;
     });
 };
+
+export const setVacationsService = (request) => {
+  const SET_VACATION_ENDPOINT = 'http://localhost:3000/api/v1/employee/vacation'
+
+  request['employeeID'] = getCookie('id');
+
+  const parameters = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': getCookie('token')
+    },
+    body: JSON.stringify(request)
+  };
+
+  return fetch(SET_VACATION_ENDPOINT, parameters)
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      console.log(json);
+      return json;
+    })
+    .catch(error => {
+      return error;
+    });
+};
+
+
+
+

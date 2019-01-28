@@ -1,5 +1,9 @@
 import { call, put } from 'redux-saga/effects';
-import { fetchEmployeeDetailsService, updateEmployeeDetailsService } from '../services/employeesService';
+import {
+  fetchEmployeeDetailsService,
+  updateEmployeeDetailsService,
+  setVacationsService
+} from '../services/employeesService';
 
 import * as types from '../actions';
 
@@ -24,5 +28,17 @@ export function* updateEmployeeDetails(payload) {
     ];
   } catch(error) {
     yield put({ type: types.UPDATE_EMPLOYEE_DETAILS_SUCCESS, error });
+  }
+};
+
+export function* setVacations(payload) {
+  try {
+    const response = yield call(setVacationsService, payload.range);
+
+    yield [
+      put({ type: types.SET_VACATIONS_SUCCESS, response })
+    ];
+  } catch (error) {
+    yield put({ type: types.SET_VACATIONS_SUCCESS, error });
   }
 };
