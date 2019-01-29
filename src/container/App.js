@@ -22,16 +22,16 @@ import EmployeeDetailsUpdateComponent from '../components/employees/details/empl
 import HomeComponent from '../components/employees/home/homeComponent';
 import ProfileComponent from '../components/employees/profile/profileComponent';
 
-import { checkCookie } from '../utils/cookies';
+import { getCookie } from '../utils/cookies';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <div>
-            <h3>Welcome to TimeOff</h3>
-          </div>
+          <h1>
+            TimeOff
+          </h1>
           <Switch>
             <Route path='/' exact={true} component={LoginComponent} />
             <Route path='/login' component={LoginComponent} />
