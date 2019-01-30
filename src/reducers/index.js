@@ -9,6 +9,7 @@ import count from './admin/countReducer';
 import online from './admin/onlineReducer';
 import activities from './admin/activityReducer';
 import vacations from './admin/vacationsReducer';
+import fetchVacations from './admin/fetchVacationsReducer';
 
 const rootReducer = combineReducers({
   register,
@@ -20,7 +21,8 @@ const rootReducer = combineReducers({
   count,
   online,
   activities,
-  vacations
+  vacations,
+  fetchVacations
 });
 
 export default rootReducer;

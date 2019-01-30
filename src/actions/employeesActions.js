@@ -19,4 +19,11 @@ export const setVacationActions = (range) => {
     type: types.SET_VACATIONS,
     range
   }
-}
+};
+
+export const fetchVacationActions = (id) => {
+  return {
+    type: types.FETCH_VACATIONS,
+    id
+  }
+};
