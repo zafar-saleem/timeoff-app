@@ -12,7 +12,7 @@ class HomeView extends Component {
       <div>
         {
           <div>
-            {this.props.vacation.start} - {this.props.vacation.end}
+            You are going on vacation from {this.props.vacation.start} to {this.props.vacation.end}.
             <Link to='' onClick={this.props.handleDelete.bind(this, this.props.vacation._id)}>Delete</Link>
           </div>
         }
