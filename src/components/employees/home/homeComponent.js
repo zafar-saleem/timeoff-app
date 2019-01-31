@@ -93,6 +93,7 @@ class HomeComponent extends Component {
     }
 
     const { from, to } = this.state;
+    const today = new Date();
     const modifiers = { start: from, end: to };
 
     return (
@@ -114,7 +115,7 @@ class HomeComponent extends Component {
           formatDate={formatDate}
           parseDate={parseDate}
           dayPickerProps={{
-            disabledDays: { after: to },
+            disabledDays: { before: today },
             toMonth: to,
             modifiers,
             numberOfMonths: 2,
