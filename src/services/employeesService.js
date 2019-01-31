@@ -7,7 +7,7 @@ export const fetchEmployeeDetailsService = (request) => {
   const id = request.details.admin.id;
   const access = request.details.admin.access;
 
-  const FETCH_EMPLOYEES_ENDPOINT = `${baseUrl}/detail?employeeID=${employeeID}&id=${id}&access=${access}`;
+  const FETCH_EMPLOYEES_ENDPOINT = `${baseUrl}/details?employeeID=${employeeID}&id=${id}&access=${access}`;
 
   const parameters = {
     method: 'GET',
