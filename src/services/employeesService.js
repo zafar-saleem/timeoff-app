@@ -52,8 +52,6 @@ export const updateEmployeeDetailsService = (request) => {
 export const setVacationsService = (request) => {
   const SET_VACATION_ENDPOINT = `${baseUrl}/vacation`;
 
-  console.log(request);
-
   const parameters = {
     method: 'POST',
     headers: {
@@ -68,11 +66,9 @@ export const setVacationsService = (request) => {
       return response.json();
     })
     .then(json => {
-      console.log(json);
       return json;
     })
     .catch(error => {
-      console.log(error);
       return error;
     });
 };

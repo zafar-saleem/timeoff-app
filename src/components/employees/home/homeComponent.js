@@ -39,11 +39,14 @@ class HomeComponent extends Component {
 
   onSaveHandle(event) {
     event.preventDefault();
+
     this.props.dispatch(setVacationActions({
       start: this.state.from,
       end: this.to.state.month,
       employeeID: getCookie('id')
     }));
+
+    this.props.dispatch(fetchVacationActions({ id: getCookie('id') }));
   }
 
   handleFromChange(from) {
