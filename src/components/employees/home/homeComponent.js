@@ -47,6 +47,8 @@ class HomeComponent extends Component {
     }));
 
     this.props.dispatch(fetchVacationActions({ id: getCookie('id') }));
+
+    this.setState({ from: undefined, to: undefined });
   }
 
   handleFromChange(from) {
