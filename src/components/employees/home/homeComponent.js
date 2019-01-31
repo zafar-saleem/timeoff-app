@@ -10,7 +10,8 @@ import HeaderComponent from '../../commons/headerComponent';
 import HomeView from './homeView';
 import {
   setVacationActions,
-  fetchVacationActions
+  fetchVacationActions,
+  deleteVacationAction
 } from '../../../actions/employeesActions';
 
 import { getCookie } from '../../../utils/cookies';
@@ -54,6 +55,14 @@ class HomeComponent extends Component {
     this.setState({ to: to });
   }
 
+  onHandleDelete = (id) => {
+    this.props.dispatch(deleteVacationAction({
+      id: id,
+      employeeID: getCookie('id')
+    }));
+    
+  }
+
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.vacations.hasOwnProperty('response')) {
       if (nextProps.vacations.response.success !== prevState.isSuccess) {
@@ -74,7 +83,6 @@ class HomeComponent extends Component {
   }
 
   render() {
-    console.log(this.props.fetchVacations.response);
     if (this.props.fetchVacations === undefined || this.props.fetchVacations.length <= 0) {
       return <div>Loading...</div>
     }
@@ -131,7 +139,11 @@ class HomeComponent extends Component {
           />
         </span>
         <button type='button' onClick={this.onSaveHandle.bind(this)}>Save</button>
-        <HomeView list={this.props.fetchVacations.response}/>
+        {this.props.fetchVacations.response.map(vacation => (
+          <div key={vacation._id}>
+            <HomeView vacation={vacation} handleDelete={this.onHandleDelete} />
+          </div>
+        ))}
       </div>
     )
   }

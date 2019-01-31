@@ -3,7 +3,8 @@ import {
   fetchEmployeeDetailsService,
   updateEmployeeDetailsService,
   setVacationsService,
-  fetchVacationsService
+  fetchVacationsService,
+  deleteVacationService
 } from '../services/employeesService';
 
 import * as types from '../actions';
@@ -53,5 +54,17 @@ export function* fetchVacations(payload) {
     ];
   } catch (error) {
     yield put({ type: types.FETCH_VACATIONS_SUCCESS, error });
+  }
+};
+
+export function* deleteVacation(payload) {
+  try {
+    const response = yield call(deleteVacationService, payload);
+
+    yield [
+      put({ type: types.DELETE_VACATION_SUCCESS, response })
+    ];
+  } catch (error) {
+    yield put({ type: types.DELETE_VACATION_SUCCESS, error });
   }
 };

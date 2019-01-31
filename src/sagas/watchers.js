@@ -11,7 +11,8 @@ import {
   fetchEmployeeDetails,
   updateEmployeeDetails,
   setVacations,
-  fetchVacations
+  fetchVacations,
+  deleteVacation
 } from './employeeSaga';
 
 import * as types from '../actions';
@@ -29,4 +30,5 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.FETCH_ACTIVITIES, fetchActivities);
   yield takeLatest(types.SET_VACATIONS, setVacations);
   yield takeLatest(types.FETCH_VACATIONS, fetchVacations);
+  yield takeLatest(types.DELETE_VACATION, deleteVacation);
 }

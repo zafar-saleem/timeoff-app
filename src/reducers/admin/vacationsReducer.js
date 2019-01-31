@@ -6,6 +6,8 @@ export default function(state = [], action) {
   switch(action.type) {
     case types.SET_VACATIONS_SUCCESS:
       return { ...state, response };
+    case types.DELETE_VACATION_SUCCESS:
+      return { ...state, response };
     default:
       return state;
   }

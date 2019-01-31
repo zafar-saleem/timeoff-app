@@ -27,3 +27,10 @@ export const fetchVacationActions = (id) => {
     id
   }
 };
+
+export const deleteVacationAction = (id) => {
+  return {
+    type: types.DELETE_VACATION,
+    id
+  }
+};
