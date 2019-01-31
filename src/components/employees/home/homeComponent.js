@@ -37,7 +37,7 @@ class HomeComponent extends Component {
     this.props.dispatch(fetchVacationActions({ id: getCookie('id') }));
   }
 
-  onSaveHandle(event) {
+  onSaveHandle = (event) => {
     event.preventDefault();
 
     this.props.dispatch(setVacationActions({
@@ -51,11 +51,11 @@ class HomeComponent extends Component {
     this.setState({ from: undefined, to: undefined });
   }
 
-  handleFromChange(from) {
+  handleFromChange = (from) => {
     this.setState({ from });
   }
 
-  handleToChange(to) {
+  handleToChange = (to) => {
     this.to = new Date(to);
     this.setState({ to: to });
   }
@@ -114,7 +114,6 @@ class HomeComponent extends Component {
           formatDate={formatDate}
           parseDate={parseDate}
           dayPickerProps={{
-            selectedDays: [from, { from, to }],
             disabledDays: { after: to },
             toMonth: to,
             modifiers,
@@ -133,7 +132,6 @@ class HomeComponent extends Component {
             formatDate={formatDate}
             parseDate={parseDate}
             dayPickerProps={{
-              selectedDays: [from, { from, to }],
               disabledDays: { before: from },
               modifiers,
               month: from,
