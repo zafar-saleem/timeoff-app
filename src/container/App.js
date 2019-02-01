@@ -27,9 +27,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <h1>
-            TimeOff
-          </h1>
           <Switch>
             <Route path='/' exact={true} component={LoginComponent} />
             <Route path='/login' component={LoginComponent} />

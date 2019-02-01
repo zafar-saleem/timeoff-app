@@ -53,9 +53,9 @@ class LoginComponent extends Component {
     }
 
     return (
-      <LoginView 
-        handleLogin={this.onHandleLogin} 
-        success={this.state.isSuccess} 
+      <LoginView
+        handleLogin={this.onHandleLogin}
+        success={this.state.isSuccess}
         message={this.state.message} />
     );
   }

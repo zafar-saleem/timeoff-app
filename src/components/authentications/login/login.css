@@ -1,0 +1,52 @@
+.login-container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 100px;
+  border-radius: 3px;
+}
+
+.logo {
+  position: inherit;
+  left: 4.5em;
+  bottom: 140px;
+  width: 155px;
+  height: 154px;
+  background: url(./assets/logo.png) no-repeat;
+}
+
+form {
+  width: -webkit-fill-available;
+}
+
+form input, form button {
+  border-radius: .2em;
+}
+
+form input {
+  width: -webkit-fill-available;
+  padding: 1em 1.2em;
+  margin-bottom: .3em;
+  border: 1px solid #cbcccd;
+  background-color: #d9dbdc;
+}
+
+form button {
+  position: absolute;
+  right: 0;
+  margin-top: .3em;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 1em 3.8em;
+  box-shadow: 0 0 .7em #8e8d8d;
+  border: 1px solid #55ace3;
+  background-color: #64b2e3;
+}
+
+form button:hover {
+  box-shadow: 0 .3em .7em #8e8d8d;
+}
