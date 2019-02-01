@@ -22,11 +22,16 @@ const EmployeeDetailsUpdateView = (props) => (
       </div>
       <div>
         <label>Role</label>
-        <select name="role" defaultValue={props.employee.role}>
-          <option>Select</option>
-          <option value="Client">Client</option>
-          <option value="Admin">Admin</option>
-        </select>
+        {(props.employee.role === 'Admin')
+          ?
+          <select name="role" defaultValue={props.employee.role}>
+            <option>Select</option>
+            <option value="Client">Client</option>
+            <option value="Admin">Admin</option>
+          </select>
+          :
+          <input type="text" name="role" readOnly value={props.employee.role} />
+        }
       </div>
       <div>
         <button>Update</button>

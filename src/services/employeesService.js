@@ -31,7 +31,7 @@ export const fetchEmployeeDetailsService = (request) => {
 };
 
 export const updateEmployeeDetailsService = (request) => {
-  const FETCH_EMPLOYEES_ENDPOINT = `${baseUrl}/details`;
+  const UPDATE_EMPLOYEES_ENDPOINT = `${baseUrl}/details`;
 
   const parameters = {
     method: 'PUT',
@@ -42,7 +42,7 @@ export const updateEmployeeDetailsService = (request) => {
     body: JSON.stringify(request.details)
   };
 
-  return fetch(FETCH_EMPLOYEES_ENDPOINT, parameters)
+  return fetch(UPDATE_EMPLOYEES_ENDPOINT, parameters)
     .then(response => {
       return response.json();
     })
