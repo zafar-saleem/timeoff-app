@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { getCookie, deleteCookies, setCookie } from '../../utils/cookies';
+import { getCookie, setCookie } from '../../utils/cookies';
+import { connect } from 'react-redux';
+
+import { logoutAction } from '../../actions/authenticationActions';
 
 class LogoutComponent extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    
+    this.props.dispatch(logoutAction({id: getCookie('id')}));
+
     setCookie('token', getCookie('token'), 0);
     setCookie('role', getCookie('role'), 0);
     setCookie('id', getCookie('role'), 0);
@@ -19,4 +25,4 @@ class LogoutComponent extends Component {
   }
 }
 
-export default LogoutComponent;
+export default connect()(LogoutComponent);
