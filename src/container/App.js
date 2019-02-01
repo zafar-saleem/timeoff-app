@@ -13,7 +13,6 @@ import DashboardComponent from '../components/admin/dashboard/dashboardComponent
 
 import HeaderComponent from '../components/commons/headerComponent';
 import EmployeesListComponent from '../components/admin/list/employeesListComponent';
-import EmployeeScheduleComponent from '../components/admin/schedule/employeeScheduleComponent';
 import AddEmployeeComponent from '../components/admin/addEmployee/addEmployeeComponent';
 
 import EmployeeDetailsComponent from '../components/employees/details/employeeDetailsComponent';
@@ -38,7 +37,6 @@ class App extends Component {
             <PrivateRoute path='/logout' component={LogoutComponent} />
             <PrivateRoute path='/admin/dashboard' component={DashboardComponent} />
             <PrivateRoute path='/admin/list' component={EmployeesListComponent} />
-            <PrivateRoute path='/admin/schedule' component={EmployeeScheduleComponent} />
             <PrivateRoute path='/admin/new' component={AddEmployeeComponent} />
 
             <PrivateRoute path='/employee/details/:id' component={EmployeeDetailsComponent} />
