@@ -8,7 +8,7 @@ const LoginView = (props) => (
   <div className='login-container'>
     <a href='/' className='logo'></a>
     {(checkCookie() !== null) ? <Redirect to='/admin/dashboard' /> : null}
-    {(!props.isSuccess) ? <div>{props.message}</div> : null}
+    {(!props.isSuccess) ? <div className='error'>{props.message}</div> : null}
     <form onSubmit={props.handleLogin}>
       <div>
         <input type="text" name="username" placeholder="Username" />
