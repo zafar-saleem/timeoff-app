@@ -56,6 +56,6 @@ form button:hover {
   box-shadow: 0 .3em .7em #8e8d8d;
 }
 
-form button:hover {
+form button:active {
   box-shadow: 0 0 .7em #8e8d8d;
 }
