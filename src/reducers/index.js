@@ -1,16 +1,19 @@
 import { combineReducers } from 'redux';
 import register from './registerReducer';
 import login from './loginReducer';
+
 import admin from './admin/adminReducer';
 import list from './admin/listReducer';
-import details from './admin/detailsReducer';
-import update from './admin/updateReducer';
 import count from './admin/countReducer';
 import online from './admin/onlineReducer';
 import activities from './admin/activityReducer';
-import vacations from './admin/vacationsReducer';
-import fetchVacations from './admin/fetchVacationsReducer';
 import deactivate from './admin/deactivateReducer';
+
+import vacations from './employee/vacationsReducer';
+
+import fetchVacations from './common/fetchVacationsReducer';
+import details from './common/detailsReducer';
+import update from './common/updateReducer';
 
 const rootReducer = combineReducers({
   register,
