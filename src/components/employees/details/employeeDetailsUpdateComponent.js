@@ -61,6 +61,10 @@ class EmployeeDetailsUpdateComponent extends Component {
   }
 
   render() {
+    if (this.props.response.details.response === undefined) {
+      return <div>Loading...</div>
+    }
+    
     return (
       <div>
         <HeaderComponent />
