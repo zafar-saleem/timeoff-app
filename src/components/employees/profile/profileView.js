@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { getCookie } from '../../../utils/cookies';
+
 const ProfileView = (props) => (
   <div>
     <ul>
@@ -9,7 +11,7 @@ const ProfileView = (props) => (
       <li>Role: {props.employee.role}</li>
       <li>Username: {props.employee.username}</li>
     </ul>
-    <Link to="employee/profile/edit">Edit</Link>
+    <Link to={`/employee/update/${getCookie('id')}`}>Edit</Link>
   </div>
 );
 

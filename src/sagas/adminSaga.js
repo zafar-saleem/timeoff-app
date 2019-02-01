@@ -4,7 +4,8 @@ import {
   fetchEmployeesService,
   fetchEmployeesCountService,
   fetchOnlineEmployeesService,
-  fetchActivitiesService
+  fetchActivitiesService,
+  deactivateService
 } from '../services/adminService';
 
 import * as types from '../actions';
@@ -67,5 +68,17 @@ export function* fetchActivities() {
     ];
   } catch(error) {
     yield put({ type: types.FETCH_ACTIVITIES_SUCCESS, error });
+  }
+};
+
+export function* deactivate(payload) {
+  try {
+    const response = yield call(deactivateService, payload);
+
+    yield [
+      put({ type: types.DEACTIVATE_EMPLOYEE_SUCCESS, response })
+    ];
+  } catch(error) {
+    yield put({ type: types.DEACTIVATE_EMPLOYEE_SUCCESS, error });
   }
 };

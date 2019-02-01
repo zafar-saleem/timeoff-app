@@ -13,3 +13,10 @@ export const employeesListAction = (data) => {
     data
   }
 };
+
+export const employeeDeactivateAction = (id) => {
+  return {
+    type: types.DEACTIVATE_EMPLOYEE,
+    id
+  }
+};

@@ -5,7 +5,8 @@ import {
   fetchEmployees,
   fetchEmployeesCount,
   fetchOnlineEmployees,
-  fetchActivities
+  fetchActivities,
+  deactivate
 } from './adminSaga';
 import {
   fetchEmployeeDetails,
@@ -31,4 +32,5 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.SET_VACATIONS, setVacations);
   yield takeLatest(types.FETCH_VACATIONS, fetchVacations);
   yield takeLatest(types.DELETE_VACATION, deleteVacation);
+  yield takeLatest(types.DEACTIVATE_EMPLOYEE, deactivate);
 }
