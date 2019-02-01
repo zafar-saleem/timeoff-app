@@ -4,10 +4,12 @@ const baseUrl = 'http://localhost:3000/api/v1/employee';
 
 export const fetchEmployeeDetailsService = (request) => {
   const employeeID = request.details.employeeID;
-  const id = request.details.admin.id;
-  const access = request.details.admin.access;
+  // const id = request.details.admin.id;
+  // const access = request.details.admin.access;
 
-  const FETCH_EMPLOYEES_ENDPOINT = `${baseUrl}/details?employeeID=${employeeID}&id=${id}&access=${access}`;
+  // console.log(id);
+
+  const FETCH_EMPLOYEES_ENDPOINT = `${baseUrl}/details?employeeID=${employeeID}`;
 
   const parameters = {
     method: 'GET',
@@ -23,6 +25,8 @@ export const fetchEmployeeDetailsService = (request) => {
     })
     .then(json => {
       return json;
+    }).catch(error => {
+      return error;
     });
 };
 
