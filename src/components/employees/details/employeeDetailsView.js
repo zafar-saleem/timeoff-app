@@ -9,7 +9,11 @@ const employeeDetailsView = (props) => (
     <div><span>Role: </span>{props.employee.role}</div>
     <div><span>Username: </span>{props.employee.username}</div>
     <div><Link to={`/employee/update/${props.employee._id}`}>Edit</Link></div>
-    <button onClick={props.handleDeactivate}>Deactivate {props.employee.name}</button>
+    {(props.employee.active !== false) ? 
+      <button onClick={props.handleDeactivate}>Deactivate {props.employee.name}</button>
+      :
+      <button onClick={props.handleDeactivate} disabled>{props.employee.name} is Deactive</button>
+    }
   </div>
 );
 
