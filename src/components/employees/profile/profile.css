@@ -1,0 +1,25 @@
+.profile {
+  padding: 3em 10em 5em 5em;
+}
+
+.profile table {
+  display: block;
+}
+
+.profile table tbody {
+  display: block;
+}
+
+.profile table tbody tr {
+  display: block;
+  padding: 1em;
+}
+
+.profile table tbody tr:nth-child(even) {
+  background-color: #e6e5e5;
+}
+
+.profile table tbody tr th {
+  width: 100px;
+  text-align: left;
+}
