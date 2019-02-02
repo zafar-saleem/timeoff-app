@@ -15,7 +15,7 @@ class ActivitiesComponent extends Component {
     }
 
     return (
-      <div>
+      <div className='activities'>
         <h4>Recent Activities</h4>
         <ul>
           {this.props.activities.activities.map(activity => (

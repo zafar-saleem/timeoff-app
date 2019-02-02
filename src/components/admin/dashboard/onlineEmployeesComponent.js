@@ -11,7 +11,7 @@ class OnlineEmployeesComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className='card online'>
         <h1>{this.props.online.online}</h1>
         <p>Employees Online</p>
       </div>

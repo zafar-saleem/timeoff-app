@@ -9,6 +9,8 @@ import ActivitiesComponent from './activitiesComponent';
 
 import { getCookie } from '../../../utils/cookies';
 
+import './dashboard.css';
+
 class DashboardComponent extends Component {
   render() {
     return (
@@ -16,7 +18,7 @@ class DashboardComponent extends Component {
         <HeaderComponent />
         {(getCookie('role') === 'Admin')
         ?
-        <div>
+        <div className='dashboard'>
           <CountEmployeesComponent />
           <OnlineEmployeesComponent />
           <ActivitiesComponent />

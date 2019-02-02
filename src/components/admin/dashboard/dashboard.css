@@ -1,0 +1,40 @@
+.dashboard {
+  padding: 5em;
+}
+
+.card {
+  width: 385px;
+  display: inline-block;
+  margin-right: 1em;
+  text-align: center;
+  font-size: 2vw;
+  padding: 2em 0em 3em 0em;
+  background-color: #f6f6f6;
+}
+
+.card p {
+  margin: 0;
+  padding: 0;
+}
+
+.card h1 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.activities {
+  width: 385px;
+  display: inline-block;
+  padding: 1em 0em 1em 2em;
+  vertical-align: top;
+  background: #f6f6f6;
+}
+
+.activities ul {
+  list-style-type: none;
+  padding: 0 0 0 1.5em;
+}
+
+.activities ul li {
+  margin-bottom: .5em;
+}

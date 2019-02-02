@@ -15,7 +15,7 @@ class CountEmployeesComponent extends Component {
     }
 
     return (
-      <div>
+      <div className='card count'>
         <h1>{this.props.count.total}</h1>
         <p>Employees</p>
       </div>
