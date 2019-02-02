@@ -1,0 +1,57 @@
+.employees {
+  padding: 3em 10em 5em 5em;
+}
+
+.employees table {
+  display: block;
+}
+
+.employees table thead {
+  padding: 1em 0;
+  display: block;
+  color: #ffffff;
+  background: #afafaf;
+}
+
+.employees table thead tr th {
+  width: 280px;
+  text-align: left;
+}
+
+.employees table tbody {
+  display: block;
+  width: 100%;
+}
+
+.employees table tbody tr {
+  padding: 1em 0;
+  display: block;
+}
+
+.employees table tbody tr:nth-child(even) {
+  background-color: #e6e5e5;
+}
+
+.employees table tbody tr td {
+  width: 350px;
+  text-align: left;
+}
+
+.employees table tbody tr:hover {
+  background-color: #f0eeee;
+}
+
+.employees table tbody tr td .name {
+  text-decoration: none;
+  color: #000000;
+}
+
+.employees table tbody tr td .deactivate {
+  color: #fb7878;
+  text-decoration: none;
+}
+
+.employees table tbody tr td.tb-check, .employees table thead tr th.tb-check {
+  width: 50px;
+  padding: 0 0 0 1em;
+}

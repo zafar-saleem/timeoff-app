@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import './employees.css';
+
 const EmployeesListView = (props) => {
   if (props.list == undefined) {
     return null;
@@ -11,20 +13,22 @@ const EmployeesListView = (props) => {
   }
 
   return (
-    <div>
+    <div className='employees'>
       <table>
         <thead>
           <tr>
+            <th className='tb-check'></th>
             <th>Name</th>
             <th>Position</th>
             <th>Username</th>
           </tr>
         </thead>
-      {props.list.map(li => (  
-        <tbody key={li._id}>
-          <tr>
+        <tbody>
+        {props.list.map(li => (  
+          <tr key={li._id}>
+            <td className='tb-check'><input type='checkbox' /></td>
             <td>
-              <Link to={`/employee/details/${li._id}`}>{li.name}</Link>
+              <Link className='name' to={`/employee/details/${li._id}`}>{li.name}</Link>
             </td>
             <td>
               {li.position}
@@ -32,9 +36,12 @@ const EmployeesListView = (props) => {
             <td>
               {li.username}
             </td>
+            <td>
+              <Link to='' className='deactivate'>Deactivate</Link>
+            </td>
           </tr>
-        </tbody>
-      ))}
+        ))}
+      </tbody>
       </table>
     </div>
   );
