@@ -6,6 +6,7 @@ import { getCookie } from '../../utils/cookies';
 import './header.css';
 
 class HeaderComponent extends Component {
+
   render() {
     return (
       <div className='header-container'>

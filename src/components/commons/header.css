@@ -22,7 +22,7 @@
 }
 
 .navbar li .link, .logout {
-  padding: .8em 1.6em .5em;
+  padding: .8em 1.6em .7em;
   text-decoration: none;
   color: #000000;
   background-color: #d9dbdc;
@@ -38,14 +38,14 @@
 
 .welcome {
   position: absolute;
-  top: 4.2em;
+  top: 4.8em;
   right: 9.7em;
 }
 
 .logout {
   position: absolute;
   right: 10em;
-  top: 6em;
+  top: 7em;
   color: #ffffff;
   border: 1px solid #f5696c;
   box-shadow: 0 0 .7em #8e8d8d;
