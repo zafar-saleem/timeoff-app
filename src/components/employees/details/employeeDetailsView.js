@@ -28,7 +28,7 @@ const employeeDetailsView = ({ message, employee, success, handleDeactivate }) =
     {(employee.active !== false) ? 
       <button className='btn-deactivate' onClick={handleDeactivate}>Deactivate {employee.name}</button>
       :
-      <button className='btn-deactivate' onClick={handleDeactivate} disabled>{employee.name} is Deactive</button>
+      <button className='btn-deactivate' onClick={handleDeactivate} disabled>{employee.name} is Deactived</button>
     }
   </div>
 );
