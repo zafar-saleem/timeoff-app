@@ -16,6 +16,8 @@ import {
 
 import { getCookie } from '../../../utils/cookies';
 
+import './home.css';
+
 class HomeComponent extends Component {
   state = {
     from: undefined,
@@ -99,16 +101,18 @@ class HomeComponent extends Component {
     return (
       <div>
         <HeaderComponent />
+        <div className='home'>
         <div>
           {
             (this.state.isSuccess)
             ?
             <div>{this.state.message}</div>
             :
-            <div>{this.state.message}</div>
+            <div className='error'>{this.state.message}</div>
           }
         </div>
         <DayPickerInput
+          className='date from'
           value={from}
           placeholder="From"
           format="LL"
@@ -126,6 +130,7 @@ class HomeComponent extends Component {
         —{' '}
         <span className="InputFromTo-to">
           <DayPickerInput
+            className='date to'
             ref={el => (this.to = el)}
             value={to}
             placeholder="To"
@@ -143,11 +148,14 @@ class HomeComponent extends Component {
           />
         </span>
         <button type='button' onClick={this.onSaveHandle.bind(this)}>Save</button>
-        {this.props.fetchVacations.response.map(vacation => (
-          <div key={vacation._id}>
-            <HomeView vacation={vacation} handleDelete={this.onHandleDelete} />
-          </div>
-        ))}
+        <table>
+          <tbody>
+            {this.props.fetchVacations.response.map(vacation => (
+              <HomeView vacation={vacation} handleDelete={this.onHandleDelete} key={vacation._id} />
+            ))}
+          </tbody>
+        </table>
+        </div>
       </div>
     )
   }

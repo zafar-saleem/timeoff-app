@@ -9,14 +9,10 @@ class HomeView extends Component {
 
   render() {
     return (
-      <div>
-        {
-          <div>
-            You are going on vacation from {this.props.vacation.start} to {this.props.vacation.end}.
-            <Link to='' onClick={this.props.handleDelete.bind(this, this.props.vacation._id)}>Delete</Link>
-          </div>
-        }
-      </div>
+      <tr>
+        You are going on vacation from <b>{this.props.vacation.start}</b> to <b>{this.props.vacation.end}</b>.
+        <Link to='' className='btn-delete' onClick={this.props.handleDelete.bind(this, this.props.vacation._id)}>Delete</Link>
+      </tr>
     )
   }
 }
