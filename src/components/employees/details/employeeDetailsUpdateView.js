@@ -1,4 +1,5 @@
 import React from 'react';
+import { getCookie } from '../../../utils/cookies';
 
 const EmployeeDetailsUpdateView = (props) => (
   <div className='update'>
@@ -22,7 +23,7 @@ const EmployeeDetailsUpdateView = (props) => (
       </div>
       <div>
         <label>Role</label>
-        {(props.employee.role === 'Admin')
+        {(getCookie('role') === 'Admin')
           ?
           <select name="role" defaultValue={props.employee.role}>
             <option>Select</option>
