@@ -5,7 +5,7 @@ import './details.css';
 
 const employeeDetailsView = ({ message, employee, success, handleDeactivate }) => (
   <div className='details'>
-    {(success) ? <div>{message}</div> : null}
+    {(success) ? <div className='error'>{message}</div> : null}
     <table>
       <tbody>
           <tr>
@@ -20,9 +20,13 @@ const employeeDetailsView = ({ message, employee, success, handleDeactivate }) =
           <tr>
             <th>Username</th><td>{employee.username}</td>
           </tr>
-          <tr className='edit-link'>
-            <th></th><Link className='edit' to={`/employee/update/${employee._id}`}>Edit {employee.name}</Link>
-          </tr>
+          {(employee.active !== false)
+            ? 
+            <tr className='edit-link'>
+              <th></th><Link className='edit' to={`/employee/update/${employee._id}`}>Edit {employee.name}</Link>
+            </tr>
+            : null
+          }
       </tbody>
     </table>
     {(employee.active !== false) ? 
