@@ -1,3 +1,30 @@
 .new {
   padding: 3em 10em 5em 5em;
 }
+
+.new form div {
+  margin-bottom: 1em;
+}
+
+.new form div label {
+  display: inline-block;
+  width: 100px;
+}
+
+.new button {
+  left: 16em;
+}
+
+.new form input {
+  padding: 2em;
+  width: 30em;
+}
+
+.new form select {
+  -webkit-appearance: none;
+  width: 34em;
+  padding: 2em 1.2em;
+  margin-bottom: .3em;
+  border: 1px solid #cbcccd;
+  background-color: #d9dbdc;
+}
