@@ -47,8 +47,11 @@
 }
 
 .employees table tbody tr td .deactivate {
-  color: #fb7878;
+  display: block;
+  padding-right: 4em;
   text-decoration: none;
+  text-align: right;
+  color: #fb7878;
 }
 
 .employees table tbody tr td.tb-check, .employees table thead tr th.tb-check {

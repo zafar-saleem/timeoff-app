@@ -1,0 +1,49 @@
+.details {
+  padding: 3em 10em 5em 5em;
+}
+
+.details table {
+  display: block;
+}
+
+.details table tbody {
+  display: block;
+}
+
+.details table tbody tr {
+  display: block;
+  padding: 1em;
+}
+
+.details table tbody tr:nth-child(even) {
+  background-color: #e6e5e5;
+}
+
+.details table tbody tr th {
+  width: 100px;
+  text-align: left;
+}
+
+.edit {
+  text-decoration: none;
+  color: #5597fb;
+}
+
+.btn-deactivate {
+  position: absolute;
+  right: 13em;
+  padding: 1em 2em;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #f5696c;
+  box-shadow: 0 0 .7em #8e8d8d;
+  background-color: #f68285;
+}
+
+.btn-deactivate:hover {
+  box-shadow: 0 .3em .7em #8e8d8d;
+}
+
+.btn-deactivate:active {
+  box-shadow: 0 0 .7em #8e8d8d;
+}

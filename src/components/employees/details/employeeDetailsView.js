@@ -1,18 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const employeeDetailsView = (props) => (
-  <div>
-    {(props.success) ? <div>{props.message}</div> : null}
-    <div><span>Name: </span>{props.employee.name}</div>
-    <div><span>Position: </span>{props.employee.position}</div>
-    <div><span>Role: </span>{props.employee.role}</div>
-    <div><span>Username: </span>{props.employee.username}</div>
-    <div><Link to={`/employee/update/${props.employee._id}`}>Edit</Link></div>
-    {(props.employee.active !== false) ? 
-      <button onClick={props.handleDeactivate}>Deactivate {props.employee.name}</button>
+import './details.css';
+
+const employeeDetailsView = ({ message, employee, success, handleDeactivate }) => (
+  <div className='details'>
+    {(success) ? <div>{message}</div> : null}
+    <table>
+      <tbody>
+          <tr>
+            <th>Name</th><td>{employee.name}</td>
+          </tr>
+          <tr>
+            <th>Position</th><td>{employee.position}</td>
+          </tr>
+          <tr>
+            <th>Role</th><td>{employee.role}</td>
+          </tr>
+          <tr>
+            <th>Username</th><td>{employee.username}</td>
+          </tr>
+          <tr className='edit-link'>
+            <th></th><Link className='edit' to={`/employee/update/${employee._id}`}>Edit {employee.name}</Link>
+          </tr>
+      </tbody>
+    </table>
+    {(employee.active !== false) ? 
+      <button className='btn-deactivate' onClick={handleDeactivate}>Deactivate {employee.name}</button>
       :
-      <button onClick={props.handleDeactivate} disabled>{props.employee.name} is Deactive</button>
+      <button className='btn-deactivate' onClick={handleDeactivate} disabled>{employee.name} is Deactive</button>
     }
   </div>
 );
