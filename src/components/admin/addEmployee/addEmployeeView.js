@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './add.css';
+
 const AddEmployeeView = (props) => (
-  <div>
+  <div className='new'>
     {(props.success) ? <div>{props.message}</div> : <div>{props.message}</div>}
     <form onSubmit={props.handleAddEmployee}>
       <div>

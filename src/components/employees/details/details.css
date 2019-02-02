@@ -48,3 +48,25 @@
 .btn-deactivate:active {
   box-shadow: 0 0 .7em #8e8d8d;
 }
+
+.update {
+  padding: 3em 10em 5em 5em;
+}
+
+.update form div {
+  margin-bottom: 1em;
+}
+
+.update form div label {
+  display: inline-block;
+  width: 100px;
+}
+
+.update button {
+  left: 16em;
+}
+
+.update form input {
+  padding: 2em;
+  width: 30em;
+}

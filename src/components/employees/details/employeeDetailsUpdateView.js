@@ -1,7 +1,7 @@
 import React from 'react';
 
 const EmployeeDetailsUpdateView = (props) => (
-  <div>
+  <div className='update'>
     <form onSubmit={props.handleUpdateEmployee}>
       <div>{(!props.isSuccess) ? <div>{props.message}</div> : null}</div>
       <div>
