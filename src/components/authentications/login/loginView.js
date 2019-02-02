@@ -6,7 +6,7 @@ import './login.css';
 
 const LoginView = (props) => (
   <div className='login-container'>
-    <a href='/' className='logo'></a>
+    <a href='/' className='logo-login'></a>
     {(checkCookie() !== null) ? <Redirect to='/admin/dashboard' /> : null}
     {(!props.isSuccess) ? <div className='error'>{props.message}</div> : null}
     <form onSubmit={props.handleLogin}>

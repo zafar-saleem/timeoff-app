@@ -10,13 +10,13 @@
   border-radius: 3px;
 }
 
-.logo {
+.logo-login {
   position: inherit;
   left: 4.5em;
   bottom: 140px;
   width: 155px;
   height: 154px;
-  background: url(./assets/logo.png) no-repeat;
+  background: url(./assets/logo-login.png) no-repeat;
 }
 
 .error {

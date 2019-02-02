@@ -67,14 +67,15 @@
 }
 
 .update form input {
-  padding: 2em;
+  padding: 1.5em;
   width: 30em;
 }
 
 .update form select {
   -webkit-appearance: none;
-  width: 34em;
-  padding: 2em 1.2em;
+  width: 33.2em;
+  padding: 1.5em 1em;
+  border-radius: .2em;
   margin-bottom: .3em;
   border: 1px solid #cbcccd;
   background-color: #d9dbdc;
