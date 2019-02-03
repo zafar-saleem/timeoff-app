@@ -31,6 +31,7 @@ class LoginComponent extends Component {
         setCookie('token', nextProps.response.login.response.token, 1);
         setCookie('role', nextProps.response.login.response.role, 1);
         setCookie('id', nextProps.response.login.response.id, 1);
+        setCookie('name', nextProps.response.login.response.name, 1);
 
         return {
           isSuccess: nextProps.response.login.response.success,
