@@ -45,7 +45,8 @@ class HomeComponent extends Component {
     this.props.dispatch(setVacationActions({
       start: this.state.from,
       end: this.to.state.month,
-      employeeID: getCookie('id')
+      employeeID: getCookie('id'),
+      expire: false
     }));
 
     this.props.dispatch(fetchVacationActions({ id: getCookie('id') }));
