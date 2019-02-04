@@ -14,7 +14,13 @@ const EmployeesListView = (props) => {
 
   return (
     <div className='employees'>
-      <input className='employee-search' type='text' name='search' placeholder='Search employee by Username' onChange={props.handleOnChange} />
+      <input 
+        className='employee-search'
+        type='text'
+        name='search'
+        placeholder='Search employee by Username'
+        onChange={props.handleOnChange}
+      />
       <table>
         <thead>
           <tr>
@@ -25,21 +31,21 @@ const EmployeesListView = (props) => {
           </tr>
         </thead>
         <tbody>
-        {props.list.map(li => (  
-          <tr key={li._id}>
-            <td className='tb-check'><input type='checkbox' /></td>
-            <td>
-              {li.username}
-            </td>
-            <td>
-              <Link className='name' to={`/employee/details/${li._id}`}>{li.name}</Link>
-            </td>
-            <td>
-              {li.position}
-            </td>
-          </tr>
-        ))}
-      </tbody>
+          {props.list.map(li => (  
+            <tr key={li._id}>
+              <td className='tb-check'><input type='checkbox' /></td>
+              <td>
+                <Link className='name' to={`/employee/details/${li._id}`}><b>{li.username}</b></Link>
+              </td>
+              <td>
+                <Link className='name' to={`/employee/details/${li._id}`}><b>{li.name}</b></Link>
+              </td>
+              <td>
+                {li.position}
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
