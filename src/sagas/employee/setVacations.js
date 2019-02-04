@@ -1,5 +1,5 @@
 import { call, put } from 'redux-saga/effects';
-import { setVacationsService } from '../../services/employeesService';
+import { setVacationsService } from '../../services/employee/setVacation';
 
 import * as types from '../../actions';
 

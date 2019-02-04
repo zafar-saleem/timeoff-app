@@ -1,5 +1,5 @@
 import { call, put } from 'redux-saga/effects';
-import { searchService } from '../../services/adminService';
+import { searchService } from '../../services/admin/search';
 
 import * as types from '../../actions';
 
