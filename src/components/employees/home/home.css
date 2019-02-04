@@ -50,3 +50,11 @@
   text-decoration: none;
   color: #f68285;
 }
+
+.home .expire {
+  color: #cccccc;
+}
+
+.home .expire .btn-delete {
+  color: #fababc;
+}
