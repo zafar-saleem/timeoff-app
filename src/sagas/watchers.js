@@ -1,21 +1,19 @@
 import { takeLatest } from 'redux-saga/effects';
 import { registerSaga, loginSaga, logoutSaga } from './authenticationSaga';
-import {
-  addEmployeeSaga,
-  fetchEmployees,
-  fetchEmployeesCount,
-  fetchOnlineEmployees,
-  fetchActivities,
-  deactivate,
-  search
-} from './adminSaga';
-import {
-  fetchEmployeeDetails,
-  updateEmployeeDetails,
-  setVacations,
-  fetchVacations,
-  deleteVacation
-} from './employeeSaga';
+
+import { search } from './admin/search';
+import { addEmployeeSaga } from './admin/addEmployee';
+import { fetchEmployees } from './admin/fetchEmployees';
+import { fetchEmployeesCount } from './admin/count';
+import { fetchOnlineEmployees } from './admin/online';
+import { fetchActivities } from './admin/activities';
+import { deactivate } from './admin/deactivate';
+
+import { fetchEmployeeDetails } from './employee/fetchDetails';
+import { updateEmployeeDetails } from './employee/updateDetails';
+import { setVacations } from './employee/setVacations';
+import { fetchVacations } from './employee/fetchVacations';
+import { deleteVacation } from './employee/deleteVacations';
 
 import * as types from '../actions';
 
