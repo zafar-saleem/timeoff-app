@@ -37,9 +37,6 @@ const EmployeesListView = (props) => {
             <td>
               {li.position}
             </td>
-            <td>
-              <Link to='' className='deactivate'>Deactivate</Link>
-            </td>
           </tr>
         ))}
       </tbody>
