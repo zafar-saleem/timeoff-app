@@ -38,15 +38,16 @@
 
 .welcome {
   position: absolute;
-  top: 4.8em;
+  top: 5.2em;
   right: 9.7em;
 }
 
 .logout {
   position: absolute;
-  right: 10em;
-  top: 7em;
+  right: 10.8em;
+  top: 8em;
   color: #ffffff;
+  font-size: .9em;
   border: 1px solid #f5696c;
   box-shadow: 0 0 .7em #8e8d8d;
   background-color: #f68285;
