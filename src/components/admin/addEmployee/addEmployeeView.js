@@ -31,7 +31,7 @@ const AddEmployeeView = (props) => (
         </select>
       </div>
       <div>
-        <button>Save</button>
+        <button className="btn success">Save</button>
       </div>
     </form>
   </div>

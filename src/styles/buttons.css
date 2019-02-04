@@ -1,0 +1,27 @@
+.btn {
+  position: absolute;
+  color: #ffffff;
+  font-size: .9em;
+  cursor: pointer;
+  text-decoration: none;
+  padding: .8em 1.6em .7em;
+  box-shadow: 0 0 .7em #8e8d8d;
+}
+
+.btn.danger {
+  border: 1px solid #f5696c;
+  background-color: #f68285
+}
+
+.btn.success {
+  border: 1px solid #55ace3;
+  background-color: #64b2e3;
+}
+
+.btn:hover {
+  box-shadow: 0 .3em .7em #8e8d8d;
+}
+
+.btn:active {
+  box-shadow: 0 0 .7em #8e8d8d;
+}

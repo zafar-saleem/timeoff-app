@@ -36,14 +36,7 @@
 }
 
 .home button {
-  position: absolute;
   margin-left: 1em;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 1em 3.8em;
-  box-shadow: 0 0 .7em #8e8d8d;
-  border: 1px solid #55ace3;
-  background-color: #64b2e3;
 }
 
 .btn-delete {

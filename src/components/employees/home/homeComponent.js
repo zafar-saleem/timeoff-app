@@ -148,7 +148,7 @@ class HomeComponent extends Component {
             onDayChange={this.handleToChange.bind(this)}
           />
         </span>
-        <button type='button' onClick={this.onSaveHandle.bind(this)}>Save</button>
+        <button type='button' className='btn success' onClick={this.onSaveHandle.bind(this)}>Save</button>
         <table>
           <tbody>
             {this.props.fetchVacations.response.map(vacation => (

@@ -35,7 +35,7 @@ const EmployeeDetailsUpdateView = (props) => (
         }
       </div>
       <div>
-        <button>Update</button>
+        <button className='btn success'>Update</button>
       </div>
     </form>
   </div>

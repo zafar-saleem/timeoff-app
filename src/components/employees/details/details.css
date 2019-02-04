@@ -30,23 +30,9 @@
 }
 
 .btn-deactivate {
-  position: absolute;
   right: 13em;
   padding: 1em 2em;
   margin-top: 50px;
-  color: #ffffff;
-  cursor: pointer;
-  border: 1px solid #f5696c;
-  box-shadow: 0 0 .7em #8e8d8d;
-  background-color: #f68285;
-}
-
-.btn-deactivate:hover {
-  box-shadow: 0 .3em .7em #8e8d8d;
-}
-
-.btn-deactivate:active {
-  box-shadow: 0 0 .7em #8e8d8d;
 }
 
 .update {
@@ -63,7 +49,7 @@
 }
 
 .update button {
-  left: 16em;
+  left: 13.4em;
 }
 
 .update form input {

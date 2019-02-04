@@ -30,9 +30,9 @@ const employeeDetailsView = ({ message, employee, success, handleDeactivate }) =
       </tbody>
     </table>
     {(employee.active !== false) ? 
-      <button className='btn-deactivate' onClick={handleDeactivate}>Deactivate {employee.name}</button>
+      <button className='btn danger btn-deactivate' onClick={handleDeactivate}>Deactivate {employee.name}</button>
       :
-      <button className='btn-deactivate' onClick={handleDeactivate} disabled>{employee.name} is Deactived</button>
+      <button className='btn danger btn-deactivate' onClick={handleDeactivate} disabled>{employee.name} is Deactived</button>
     }
   </div>
 );
