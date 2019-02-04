@@ -8,6 +8,7 @@ import count from './admin/countReducer';
 import online from './admin/onlineReducer';
 import activities from './admin/activityReducer';
 import deactivate from './admin/deactivateReducer';
+import search from './admin/searchReducer';
 
 import vacations from './employee/vacationsReducer';
 
@@ -27,7 +28,8 @@ const rootReducer = combineReducers({
   activities,
   vacations,
   fetchVacations,
-  deactivate
+  deactivate,
+  search
 });
 
 export default rootReducer;

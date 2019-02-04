@@ -8,7 +8,6 @@ import { getCookie } from '../../../utils/cookies';
 class HomeView extends Component {
 
   render() {
-    console.log(this.props.vacation);
     return (
       <tr className={(this.props.vacation.expire) ? 'expire' : ''}>
         You are going on vacation from <b>{this.props.vacation.start}</b> to <b>{this.props.vacation.end}</b>.

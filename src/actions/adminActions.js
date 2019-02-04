@@ -20,3 +20,10 @@ export const employeeDeactivateAction = (id) => {
     id
   }
 };
+
+export const searchEmployeeAction = (search) => {
+  return {
+    type: types.SEARCH_EMPLOYEE,
+    search
+  }
+};

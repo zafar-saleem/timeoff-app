@@ -14,13 +14,14 @@ const EmployeesListView = (props) => {
 
   return (
     <div className='employees'>
+      <input className='employee-search' type='text' name='search' placeholder='Search employee by Username' onChange={props.handleOnChange} />
       <table>
         <thead>
           <tr>
             <th className='tb-check'></th>
+            <th>Username</th>
             <th>Name</th>
             <th>Position</th>
-            <th>Username</th>
           </tr>
         </thead>
         <tbody>
@@ -28,13 +29,13 @@ const EmployeesListView = (props) => {
           <tr key={li._id}>
             <td className='tb-check'><input type='checkbox' /></td>
             <td>
+              {li.username}
+            </td>
+            <td>
               <Link className='name' to={`/employee/details/${li._id}`}>{li.name}</Link>
             </td>
             <td>
               {li.position}
-            </td>
-            <td>
-              {li.username}
             </td>
             <td>
               <Link to='' className='deactivate'>Deactivate</Link>

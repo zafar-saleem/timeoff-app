@@ -58,3 +58,12 @@
   width: 50px;
   padding: 0 0 0 1em;
 }
+
+.employees .employee-search {
+  width: 20em;
+  padding: 1em 1.2em;
+  margin-bottom: .3em;
+  border-radius: .2em;
+  border: 1px solid #cbcccd;
+  background-color: #d9dbdc;
+}
