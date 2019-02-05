@@ -1,0 +1,21 @@
+.table {
+  display: block;  
+}
+
+.table tbody {
+  display: block;
+}
+
+.table tbody tr {
+  display: block;
+  padding: 1em;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #e6e5e5;
+}
+
+.table tbody tr th {
+  width: 100px;
+  text-align: left;
+}
