@@ -1,0 +1,9 @@
+.dropdown {
+  -webkit-appearance: none;
+  width: 33.2em;
+  padding: 1.5em 1em;
+  margin-bottom: .3em;
+  border-radius: .2em;
+  border: 1px solid #cbcccd;
+  background-color: #d9dbdc;
+}
