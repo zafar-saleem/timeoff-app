@@ -45,3 +45,7 @@
 .home .expire .btn-delete {
   color: #fababc;
 }
+
+.home .message {
+  margin-left: 0;
+}

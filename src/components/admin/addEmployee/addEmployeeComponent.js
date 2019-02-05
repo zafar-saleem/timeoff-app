@@ -34,14 +34,14 @@ class NewEmployeeComponent extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.response.admin.hasOwnProperty('response')) {
-      if (nextProps.response.admin.response.success !== prevState.isSuccess) {
+      if (nextProps.response.admin.response.success !== prevState.success) {
         return {
-          isSuccess: nextProps.response.admin.response.success,
+          success: nextProps.response.admin.response.success,
           message: nextProps.response.admin.response.message
         };
       } else {
         return {
-          isSuccess: nextProps.response.admin.response.success,
+          success: nextProps.response.admin.response.success,
           message: nextProps.response.admin.response.message
         };
       }

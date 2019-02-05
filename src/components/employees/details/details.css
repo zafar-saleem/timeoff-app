@@ -50,3 +50,7 @@
 .update form input {
   width: 30em;
 }
+
+.message {
+  margin-left: 7em;
+}

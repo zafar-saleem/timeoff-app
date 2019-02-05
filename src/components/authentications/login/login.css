@@ -19,9 +19,9 @@
   background: url(./assets/logo-login.png) no-repeat;
 }
 
-.error {
-  text-align: center;
-  color: #f851a3;
+.login-container .error {
+  /*margin-left: 10em;*/
+  
 }
 
 form {

@@ -107,9 +107,9 @@ class HomeComponent extends Component {
           {
             (this.state.isSuccess)
             ?
-            <div>{this.state.message}</div>
+            <div className='message success'>{this.state.message}</div>
             :
-            <div className='error'>{this.state.message}</div>
+            <div className='message error'>{this.state.message}</div>
           }
         </div>
         <DayPickerInput

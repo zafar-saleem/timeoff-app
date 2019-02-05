@@ -4,7 +4,7 @@ import { getCookie } from '../../../utils/cookies';
 const EmployeeDetailsUpdateView = (props) => (
   <div className='update'>
     <form onSubmit={props.handleUpdateEmployee}>
-      <div>{(!props.isSuccess) ? <div className='error'>{props.message}</div> : null}</div>
+      <div className={(!props.success) ? 'message error' : 'message success'}>{props.message}</div>
       <div>
         <label>Full Name</label>
         <input type="text" name="name" defaultValue={props.employee.name} className="fields" />

@@ -18,3 +18,7 @@
 .new form input {
   width: 30em;
 }
+
+.new .error {
+  margin-left: 7em;
+}

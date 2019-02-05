@@ -4,7 +4,7 @@ import './add.css';
 
 const AddEmployeeView = (props) => (
   <div className='new'>
-    {(props.success) ? <div className='error'>{props.message}</div> : <div className='error'>{props.message}</div>}
+    <div className={(props.success) ? 'message success' : 'message error'}>{props.message}</div>
     <form onSubmit={props.handleAddEmployee}>
       <div>
         <label>Full Name</label>
