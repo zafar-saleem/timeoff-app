@@ -27,3 +27,10 @@ export const searchEmployeeAction = (search) => {
     search
   }
 };
+
+export const adminProfileAction = (data) => {
+  return {
+    type: types.FETCH_ADMIN_PROFILE,
+    data
+  }
+};

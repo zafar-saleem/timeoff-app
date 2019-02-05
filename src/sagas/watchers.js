@@ -8,6 +8,7 @@ import { fetchEmployeesCount } from './admin/count';
 import { fetchOnlineEmployees } from './admin/online';
 import { fetchActivities } from './admin/activities';
 import { deactivate } from './admin/deactivate';
+import { profile } from './admin/profile';
 
 import { fetchEmployeeDetails } from './employee/fetchDetails';
 import { updateEmployeeDetails } from './employee/updateDetails';
@@ -34,4 +35,5 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.DELETE_VACATION, deleteVacation);
   yield takeLatest(types.DEACTIVATE_EMPLOYEE, deactivate);
   yield takeLatest(types.SEARCH_EMPLOYEE, search);
+  yield takeLatest(types.FETCH_ADMIN_PROFILE, profile);
 }

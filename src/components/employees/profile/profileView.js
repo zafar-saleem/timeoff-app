@@ -7,7 +7,7 @@ import './profile.css';
 
 const ProfileView = ({employee}) => (
   <div className='profile'>
-    <table>
+    <table className='table'>
       <tbody>
           <tr>
             <th>Name</th><td className='uppercase'>{employee.name}</td>

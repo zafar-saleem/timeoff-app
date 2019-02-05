@@ -17,6 +17,7 @@ class HeaderComponent extends Component {
           <li><Link className='navlink active' to="/admin/dashboard">Dashboard</Link></li>
           <li><Link className='navlink' to="/admin/list">Employees</Link></li>
           <li><Link className='navlink' to="/admin/new">Add Employee</Link></li>
+          <li><Link className='navlink' to="/admin/profile">Profile</Link></li>
         </ul>
         :
         <ul className='navbar'>

@@ -9,6 +9,7 @@ import online from './admin/onlineReducer';
 import activities from './admin/activityReducer';
 import deactivate from './admin/deactivateReducer';
 import search from './admin/searchReducer';
+import profile from './admin/profileReducer';
 
 import vacations from './employee/vacationsReducer';
 
@@ -29,7 +30,8 @@ const rootReducer = combineReducers({
   vacations,
   fetchVacations,
   deactivate,
-  search
+  search,
+  profile
 });
 
 export default rootReducer;
