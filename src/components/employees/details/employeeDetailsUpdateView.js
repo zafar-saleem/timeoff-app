@@ -25,7 +25,7 @@ const EmployeeDetailsUpdateView = (props) => (
         <label>Role</label>
         {(getCookie('role') === 'Admin')
           ?
-          <select name="role" defaultValue={props.employee.role}>
+          <select name="role" className="dropdown" defaultValue={props.employee.role}>
             <option>Select</option>
             <option value="Client">Client</option>
             <option value="Admin">Admin</option>

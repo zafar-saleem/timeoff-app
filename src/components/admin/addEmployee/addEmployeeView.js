@@ -24,7 +24,7 @@ const AddEmployeeView = (props) => (
       </div>
       <div>
         <label>Role</label>
-        <select name="role">
+        <select className="dropdown" name="role">
           <option>Select</option>
           <option value="Client">Client</option>
           <option value="Admin">Admin</option>
