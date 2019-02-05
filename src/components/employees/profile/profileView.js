@@ -23,8 +23,8 @@ const ProfileView = ({employee}) => (
           </tr>
           {(employee.active !== false)
             ? 
-            <tr className='edit-link'>
-              <th></th><Link className='link success' to={`/employee/update/${getCookie('id')}`} className='edit'>Edit</Link>
+            <tr>
+              <th></th><Link className='link success' to={`/employee/update/${getCookie('id')}`}>Edit</Link>
             </tr>
             : null
           }
