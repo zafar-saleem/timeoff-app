@@ -23,7 +23,6 @@
 }
 
 .home .btn-delete {
-  position: absolute;
   right: 1em;
 }
 
@@ -37,11 +36,6 @@
 
 .home button {
   margin-left: 1em;
-}
-
-.btn-delete {
-  text-decoration: none;
-  color: #f68285;
 }
 
 .home .expire {

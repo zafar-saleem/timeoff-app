@@ -14,14 +14,14 @@ class HeaderComponent extends Component {
         {(getCookie('role') === 'Admin')
         ?
         <ul className='navbar'>
-          <li><Link className='link active' to="/admin/dashboard">Dashboard</Link></li>
-          <li><Link className='link' to="/admin/list">Employees</Link></li>
-          <li><Link className='link' to="/admin/new">Add Employee</Link></li>
+          <li><Link className='navlink active' to="/admin/dashboard">Dashboard</Link></li>
+          <li><Link className='navlink' to="/admin/list">Employees</Link></li>
+          <li><Link className='navlink' to="/admin/new">Add Employee</Link></li>
         </ul>
         :
         <ul className='navbar'>
-          <li><Link className='link active' to="/employee/home">Home</Link></li>
-          <li><Link className='link' to="/employee/profile">Profile</Link></li>
+          <li><Link className='navlink active' to="/employee/home">Home</Link></li>
+          <li><Link className='navlink' to="/employee/profile">Profile</Link></li>
         </ul>
         }
         {(getCookie('role') === 'Admin')

@@ -1,0 +1,12 @@
+.link {
+  position: absolute;
+  text-decoration: none;
+}
+
+.link.danger {
+  color: #f68285;
+}
+
+.link.success {
+  color: #5597fb;
+}

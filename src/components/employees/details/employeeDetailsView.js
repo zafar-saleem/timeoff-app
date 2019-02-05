@@ -23,7 +23,7 @@ const employeeDetailsView = ({ message, employee, success, handleDeactivate }) =
           {(employee.active !== false)
             ? 
             <tr className='edit-link'>
-              <th></th><Link className='edit' to={`/employee/update/${employee._id}`}>Edit {employee.name}</Link>
+              <th></th><Link className='link success' to={`/employee/update/${employee._id}`}>Edit {employee.name}</Link>
             </tr>
             : null
           }

@@ -24,13 +24,8 @@
   text-align: left;
 }
 
-.edit {
-  text-decoration: none;
-  color: #5597fb;
-}
-
 .btn-deactivate {
-  right: 13em;
+  right: 11.4em;
   padding: 1em 2em;
   margin-top: 50px;
 }
