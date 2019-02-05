@@ -7,19 +7,19 @@ const EmployeeDetailsUpdateView = (props) => (
       <div>{(!props.isSuccess) ? <div className='error'>{props.message}</div> : null}</div>
       <div>
         <label>Full Name</label>
-        <input type="text" name="name" defaultValue={props.employee.name} />
+        <input type="text" name="name" defaultValue={props.employee.name} className="fields" />
       </div>
       <div>
         <label>Position</label>
-        <input type="text" name="position" defaultValue={props.employee.position} />
+        <input type="text" name="position" defaultValue={props.employee.position} className="fields" />
       </div>
       <div>
         <label>Username</label>
-        <input type="text" name="username" defaultValue={props.employee.username} />
+        <input type="text" name="username" defaultValue={props.employee.username} className="fields" />
       </div>
       <div>
         <label>Password</label>
-        <input type="password" name="password" />
+        <input type="password" name="password" className="fields" />
       </div>
       <div>
         <label>Role</label>
@@ -31,7 +31,7 @@ const EmployeeDetailsUpdateView = (props) => (
             <option value="Admin">Admin</option>
           </select>
           :
-          <input type="text" name="role" readOnly value={props.employee.role} />
+          <input type="text" name="role" readOnly value={props.employee.role} className="fields" />
         }
       </div>
       <div>

@@ -113,7 +113,7 @@ class HomeComponent extends Component {
           }
         </div>
         <DayPickerInput
-          className='date from'
+          className='fields from'
           value={from}
           placeholder="From"
           format="LL"
@@ -131,7 +131,7 @@ class HomeComponent extends Component {
         —{' '}
         <span className="InputFromTo-to">
           <DayPickerInput
-            className='date to'
+            className='fields to'
             ref={el => (this.to = el)}
             value={to}
             placeholder="To"

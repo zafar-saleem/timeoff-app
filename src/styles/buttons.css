@@ -5,6 +5,7 @@
   cursor: pointer;
   text-decoration: none;
   padding: .8em 1.6em .7em;
+  border-radius: .2em;
   box-shadow: 0 0 .7em #8e8d8d;
 }
 

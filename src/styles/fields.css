@@ -1,0 +1,8 @@
+.fields {
+  width: -webkit-fill-available;
+  padding: 1em 1.5em;
+  margin-bottom: .3em;
+  border-radius: .2em;
+  border: 1px solid #cbcccd;
+  background-color: #d9dbdc;
+}

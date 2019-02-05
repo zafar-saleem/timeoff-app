@@ -11,10 +11,10 @@ const LoginView = (props) => (
     {(!props.isSuccess) ? <div className='error'>{props.message}</div> : null}
     <form onSubmit={props.handleLogin} className='login-form'>
       <div>
-        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="username" placeholder="Username" className="fields" />
       </div>
       <div>
-        <input type="password" name="password" placeholder="Password" />
+        <input type="password" name="password" placeholder="Password" className="fields" />
       </div>
       <div>
         <button className='btn success'>Login</button>

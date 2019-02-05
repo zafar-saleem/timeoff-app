@@ -8,19 +8,19 @@ const AddEmployeeView = (props) => (
     <form onSubmit={props.handleAddEmployee}>
       <div>
         <label>Full Name</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" className="fields" />
       </div>
       <div>
         <label>Position</label>
-        <input type="text" name="position" />
+        <input type="text" name="position" className="fields" />
       </div>
       <div>
         <label>Username</label>
-        <input type="text" name="username" />
+        <input type="text" name="username" className="fields" />
       </div>
       <div>
         <label>Password</label>
-        <input type="password" name="password" />
+        <input type="password" name="password" className="fields" />
       </div>
       <div>
         <label>Role</label>
