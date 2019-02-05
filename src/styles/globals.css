@@ -15,3 +15,7 @@ ul {
   color: #2ef96c;
   margin-bottom: 1em;
 }
+
+.uppercase {
+  text-transform: capitalize;
+}

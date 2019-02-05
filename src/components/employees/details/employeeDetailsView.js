@@ -9,10 +9,10 @@ const employeeDetailsView = ({ message, employee, success, handleDeactivate }) =
     <table>
       <tbody>
           <tr>
-            <th>Name</th><td>{employee.name}</td>
+            <th>Name</th><td className='uppercase'>{employee.name}</td>
           </tr>
           <tr>
-            <th>Position</th><td>{employee.position}</td>
+            <th>Position</th><td className='uppercase'>{employee.position}</td>
           </tr>
           <tr>
             <th>Role</th><td>{employee.role}</td>
@@ -23,16 +23,16 @@ const employeeDetailsView = ({ message, employee, success, handleDeactivate }) =
           {(employee.active !== false)
             ? 
             <tr className='edit-link'>
-              <th></th><Link className='link success' to={`/employee/update/${employee._id}`}>Edit {employee.name}</Link>
+              <th></th><Link className='link success uppercase' to={`/employee/update/${employee._id}`}>Edit {employee.name}</Link>
             </tr>
             : null
           }
       </tbody>
     </table>
     {(employee.active !== false) ? 
-      <button className='btn danger btn-deactivate' onClick={handleDeactivate}>Deactivate {employee.name}</button>
+      <button className='btn danger btn-deactivate uppercase' onClick={handleDeactivate}>Deactivate {employee.name}</button>
       :
-      <button className='btn danger btn-deactivate' onClick={handleDeactivate} disabled>{employee.name} is Deactived</button>
+      <button className='btn danger btn-deactivate uppercase' onClick={handleDeactivate} disabled>{employee.name} is Deactived</button>
     }
   </div>
 );

@@ -38,9 +38,9 @@ const EmployeesListView = (props) => {
                 <Link className='name' to={`/employee/details/${li._id}`}><b>{li.username}</b></Link>
               </td>
               <td>
-                <Link className='name' to={`/employee/details/${li._id}`}><b>{li.name}</b></Link>
+                <Link className='name uppercase' to={`/employee/details/${li._id}`}><b>{li.name}</b></Link>
               </td>
-              <td>
+              <td className='uppercase'>
                 {li.position}
               </td>
             </tr>

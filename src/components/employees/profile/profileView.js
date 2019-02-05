@@ -10,7 +10,7 @@ const ProfileView = ({employee}) => (
     <table>
       <tbody>
           <tr>
-            <th>Name</th><td>{employee.name}</td>
+            <th>Name</th><td className='uppercase'>{employee.name}</td>
           </tr>
           <tr>
             <th>Position</th><td>{employee.position}</td>

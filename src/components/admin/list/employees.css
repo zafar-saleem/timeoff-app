@@ -44,7 +44,6 @@
 .employees table tbody tr td .name {
   text-decoration: none;
   color: #000000;
-  text-transform: capitalize;
 }
 
 .employees table tbody tr td .deactivate {

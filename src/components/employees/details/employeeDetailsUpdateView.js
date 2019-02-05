@@ -7,11 +7,11 @@ const EmployeeDetailsUpdateView = (props) => (
       <div className={(!props.success) ? 'message error' : 'message success'}>{props.message}</div>
       <div>
         <label>Full Name</label>
-        <input type="text" name="name" defaultValue={props.employee.name} className="fields" />
+        <input type="text" name="name" defaultValue={props.employee.name} className="fields uppercase" />
       </div>
       <div>
         <label>Position</label>
-        <input type="text" name="position" defaultValue={props.employee.position} className="fields" />
+        <input type="text" name="position" defaultValue={props.employee.position} className="fields uppercase" />
       </div>
       <div>
         <label>Username</label>
