@@ -19,3 +19,11 @@ ul {
 .uppercase {
   text-transform: capitalize;
 }
+
+.required {
+  display: block;
+  margin-left: 10em;
+  margin-bottom: 1em;
+  font-size: .7em;
+  color: #6c6b6b;
+}

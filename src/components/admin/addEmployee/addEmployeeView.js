@@ -31,6 +31,7 @@ const AddEmployeeView = (props) => (
         </select>
       </div>
       <div>
+        <span className='required'>All fields are required.</span>
         <button className="btn success">Save</button>
       </div>
     </form>
