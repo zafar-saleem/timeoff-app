@@ -1,10 +1,11 @@
 import { getCookie } from '../../utils/cookies';
+import { baseurl } from '../../utils/baseurl';
 
 export const fetchEmployeesService = (request) => {
   let id = request.data.id;
   let access = request.data.access;
 
-  const FETCH_EMPLOYEES_ENDPOINT = `http://localhost:3000/api/v1/admin/list?id=${id}&access=${access}`;
+  const FETCH_EMPLOYEES = baseurl(`admin/list?id=${id}&access=${access}`);
 
   const parameters = {
     method: 'GET',
@@ -14,7 +15,7 @@ export const fetchEmployeesService = (request) => {
     }
   };
 
-  return fetch(FETCH_EMPLOYEES_ENDPOINT, parameters)
+  return fetch(FETCH_EMPLOYEES, parameters)
     .then(response => {
       return response.json();
     })

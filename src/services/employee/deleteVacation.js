@@ -1,9 +1,8 @@
 import { getCookie } from '../../utils/cookies';
-
-const baseUrl = 'http://localhost:3000/api/v1/employee';
+import { baseurl } from '../../utils/baseurl';
 
 export const deleteVacationService = (request) => {
-  const FETCH_VACATION_ENDPOINT = `${baseUrl}/vacation`;
+  const FETCH_VACATION = baseurl('employee/vacation');
 
   const parameters = {
     method: 'DELETE',
@@ -14,7 +13,7 @@ export const deleteVacationService = (request) => {
     body: JSON.stringify(request.id)
   };
 
-  return fetch(FETCH_VACATION_ENDPOINT, parameters)
+  return fetch(FETCH_VACATION, parameters)
     .then(response => {
       return response.json();
     })

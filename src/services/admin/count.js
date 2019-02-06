@@ -1,7 +1,8 @@
 import { getCookie } from '../../utils/cookies';
+import { baseurl } from '../../utils/baseurl';
 
 export const fetchEmployeesCountService = () => {
-  const FETCH_EMPLOYEES_COUNT_ENDPOINT = `http://localhost:3000/api/v1/dashboard/count?id=${getCookie('id')}`;
+  const FETCH_COUNT_ENDPOINT = baseurl(`dashboard/count?id=${getCookie("id")}`);
 
   const parameters = {
     method: 'GET',
@@ -11,7 +12,7 @@ export const fetchEmployeesCountService = () => {
     }
   };
 
-  return fetch(FETCH_EMPLOYEES_COUNT_ENDPOINT, parameters)
+  return fetch(FETCH_COUNT_ENDPOINT, parameters)
     .then(response => {
       return response.json();
     })

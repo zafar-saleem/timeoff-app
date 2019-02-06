@@ -1,7 +1,8 @@
 import { getCookie } from '../../utils/cookies';
+import { baseurl } from '../../utils/baseurl';
 
 export const fetchActivitiesService = () => {
-  const FETCH_ACTIVITIES_ENDPOINT = `http://localhost:3000/api/v1/dashboard/activities?id=${getCookie('id')}`;
+  const FETCH_ACTIVITIES_ENDPOINT = baseurl(`dashboard/activities?id=${getCookie('id')}`);
 
   const parameters = {
     method: 'GET',

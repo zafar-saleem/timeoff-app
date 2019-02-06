@@ -1,7 +1,8 @@
 import { getCookie } from '../../utils/cookies';
+import { baseurl } from '../../utils/baseurl';
 
 export const addEmployeeService = (request) => {
-  const EMPLOYEE_API_ENDPOINT = 'http://localhost:3000/api/v1/admin/new';
+  const NEW_ENDPOINT = baseurl('admin/new');
 
   const parameters = {
     method: 'POST',
@@ -12,7 +13,7 @@ export const addEmployeeService = (request) => {
     body: JSON.stringify(request)
   };
 
-  return fetch(EMPLOYEE_API_ENDPOINT, parameters)
+  return fetch(NEW_ENDPOINT, parameters)
     .then(response => {
       return response.json();
     })

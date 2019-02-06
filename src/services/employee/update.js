@@ -1,9 +1,8 @@
 import { getCookie } from '../../utils/cookies';
-
-const baseUrl = 'http://localhost:3000/api/v1/employee';
+import { baseurl } from '../../utils/baseurl';
 
 export const updateEmployeeDetailsService = (request) => {
-  const UPDATE_EMPLOYEES_ENDPOINT = `${baseUrl}/details`;
+  const UPDATE_PROFILE = baseurl('employee/details');
 
   const parameters = {
     method: 'PUT',
@@ -14,7 +13,7 @@ export const updateEmployeeDetailsService = (request) => {
     body: JSON.stringify(request.details)
   };
 
-  return fetch(UPDATE_EMPLOYEES_ENDPOINT, parameters)
+  return fetch(UPDATE_PROFILE, parameters)
     .then(response => {
       return response.json();
     })

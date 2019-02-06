@@ -1,5 +1,7 @@
+import { baseurl } from '../utils/baseurl';
+
 export const registerUserService = (request) => {
-  const REGISTER_API_ENDPOINT = 'http://localhost:3000/api/v1/register';
+  const REGISTER_ENDPOINT = baseurl('register');
   
   const parameters = {
     method: 'POST',
@@ -9,7 +11,7 @@ export const registerUserService = (request) => {
     body: JSON.stringify(request.user)
   };
 
-  return fetch(REGISTER_API_ENDPOINT, parameters)
+  return fetch(REGISTER_ENDPOINT, parameters)
     .then(response => {
       return response.json();
     })
@@ -19,7 +21,7 @@ export const registerUserService = (request) => {
 };
 
 export const loginUserService = (request) => {
-  const LOGIN_API_ENDPOINT = 'http://localhost:3000/api/v1/login';
+  const LOGIN_ENDPOINT = baseurl('login');
 
   const parameters = {
     method: 'POST',
@@ -29,7 +31,7 @@ export const loginUserService = (request) => {
     body: JSON.stringify(request.user)
   };
 
-  return fetch(LOGIN_API_ENDPOINT, parameters)
+  return fetch(LOGIN_ENDPOINT, parameters)
     .then(response => {
       return response.json();
     })
@@ -39,7 +41,7 @@ export const loginUserService = (request) => {
 };
 
 export const logoutUserService = (request) => {
-  const LOGOUT_API_ENDPOINT = 'http://localhost:3000/api/v1/logout';
+  const LOGOUT_ENDPOINT = baseurl('logout');
 
   const parameters = {
     method: 'POST',
@@ -49,7 +51,7 @@ export const logoutUserService = (request) => {
     body: JSON.stringify(request.user)
   };
 
-  return fetch(LOGOUT_API_ENDPOINT, parameters)
+  return fetch(LOGOUT_ENDPOINT, parameters)
     .then(response => {
       return response.json();
     })

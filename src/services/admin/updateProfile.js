@@ -1,8 +1,9 @@
 import { getCookie } from '../../utils/cookies';
-
-const baseUrl = 'http://localhost:3000/api/v1/admin/update';
+import { baseurl } from '../../utils/baseurl';
 
 export const updateAdminProfileService = (request) => {
+  const UPDATE_PROFILE = baseurl('admin/update');
+
   const parameters = {
     method: 'PUT',
     headers: {
@@ -12,7 +13,7 @@ export const updateAdminProfileService = (request) => {
     body: JSON.stringify(request.data)
   };
 
-  return fetch(baseUrl, parameters)
+  return fetch(UPDATE_PROFILE, parameters)
     .then(response => {
       return response.json();
     })

@@ -1,7 +1,8 @@
 import { getCookie } from '../../utils/cookies';
+import { baseurl } from '../../utils/baseurl';
 
 export const fetchOnlineEmployeesService = () => {
-  const FETCH_ONLINE_EMPLOYEES_ENDPOINT = `http://localhost:3000/api/v1/dashboard/online?id=${getCookie('id')}`;
+  const FETCH_ONLINE_EMPLOYEES = baseurl(`dashboard/online?id=${getCookie('id')}`);
 
   const parameters = {
     method: 'GET',
@@ -11,7 +12,7 @@ export const fetchOnlineEmployeesService = () => {
     }
   };
 
-  return fetch(FETCH_ONLINE_EMPLOYEES_ENDPOINT, parameters)
+  return fetch(FETCH_ONLINE_EMPLOYEES, parameters)
     .then(response => {
       return response.json();
     })

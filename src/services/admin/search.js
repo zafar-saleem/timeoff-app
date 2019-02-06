@@ -1,11 +1,10 @@
 import { getCookie } from '../../utils/cookies';
-
-const baseUrl = 'http://localhost:3000/api/v1/admin';
+import { baseurl } from '../../utils/baseurl';
 
 export const searchService = (request) => {
   let search = request.search;
 
-  const SEARCH_ENDPOINT = `${baseUrl}/search`;
+  const SEARCH_ENDPOINT = baseurl('admin/search');
 
   const parameters = {
     method: 'POST',

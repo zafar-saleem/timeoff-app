@@ -1,9 +1,8 @@
 import { getCookie } from '../../utils/cookies';
-
-const baseUrl = 'http://localhost:3000/api/v1/employee';
+import { baseurl } from '../../utils/baseurl';
 
 export const fetchVacationsService = (request) => {
-  const FETCH_VACATION_ENDPOINT = `${baseUrl}/vacation?id=${request.id.id}`;
+  const FETCH_VACATIONS = baseurl(`employee/vacation?id=${request.id.id}`);
 
   const parameters = {
     method: 'GET',
@@ -13,7 +12,7 @@ export const fetchVacationsService = (request) => {
     }
   };
 
-  return fetch(FETCH_VACATION_ENDPOINT, parameters)
+  return fetch(FETCH_VACATIONS, parameters)
     .then(response => {
       return response.json();
     })
