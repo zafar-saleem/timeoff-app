@@ -10,13 +10,14 @@ class LogoutComponent extends Component {
     super(props);
     
     this.props.dispatch(logoutAction({id: getCookie('id'), access: getCookie('role')}));
-
-    setCookie('token', getCookie('token'), 0);
-    setCookie('role', getCookie('role'), 0);
-    setCookie('id', getCookie('role'), 0);
   }
 
   render() {
+    setCookie('token', getCookie('token'), 0);
+    setCookie('role', getCookie('role'), 0);
+    setCookie('name', getCookie('name'), 0);
+    setCookie('id', getCookie('id'), 0);
+
     if (getCookie('token') == null || getCookie('token') == '') {
       return <Redirect to='/' />;
     }
