@@ -22,7 +22,10 @@ class AdminProfileComponent extends Component {
     return (
       <div>
         <HeaderComponent />
-        <AdminProfileView profile={this.props.profile.action.response} />
+        <AdminProfileView
+          profile={this.props.profile.action.response}
+          match={this.props.match}
+        />
       </div>
     );
   }

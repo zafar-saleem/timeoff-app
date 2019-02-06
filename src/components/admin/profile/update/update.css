@@ -1,0 +1,12 @@
+.profile-update input {
+  width: 30em;
+}
+
+.profile-update label {
+  width: 7em;
+  display: inline-block;
+}
+
+.profile-update button {
+  margin-left: 7.8em;
+}

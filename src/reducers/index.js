@@ -10,6 +10,7 @@ import activities from './admin/activityReducer';
 import deactivate from './admin/deactivateReducer';
 import search from './admin/searchReducer';
 import profile from './admin/profileReducer';
+import updateProfile from './admin/updateReducer';
 
 import vacations from './employee/vacationsReducer';
 
@@ -31,7 +32,8 @@ const rootReducer = combineReducers({
   fetchVacations,
   deactivate,
   search,
-  profile
+  profile,
+  updateProfile
 });
 
 export default rootReducer;

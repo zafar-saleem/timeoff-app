@@ -34,3 +34,10 @@ export const adminProfileAction = (data) => {
     data
   }
 };
+
+export const adminProfileUpdateAction = (data) => {
+  return {
+    type: types.UPDATE_ADMIN_PROFILE,
+    data
+  }
+};

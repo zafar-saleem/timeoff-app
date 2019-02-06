@@ -11,6 +11,7 @@ import RegisterComponent from '../components/authentications/register/registerCo
 import LogoutComponent from '../components/authentications/logoutComponent';
 import DashboardComponent from '../components/admin/dashboard/dashboardComponent';
 import AdminProfileComponent from '../components/admin/profile/adminProfileComponent';
+import AdminUpdateComponent from '../components/admin/profile/update/adminUpdateComponent';
 
 import HeaderComponent from '../components/commons/headerComponent';
 import EmployeesListComponent from '../components/admin/list/employeesListComponent';
@@ -37,6 +38,7 @@ class App extends Component {
             <PrivateRoute path='/admin/list' component={EmployeesListComponent} />
             <PrivateRoute path='/admin/new' component={AddEmployeeComponent} />
             <PrivateRoute path='/admin/profile' component={AdminProfileComponent} />
+            <PrivateRoute path='/profile/update/:id' component={AdminUpdateComponent} />
 
             <PrivateRoute path='/employee/details/:id' component={EmployeeDetailsComponent} />
             <PrivateRoute path='/employee/update/:id' component={EmployeeDetailsUpdateComponent} />

@@ -26,8 +26,8 @@ class HeaderComponent extends Component {
         </ul>
         }
         {(getCookie('role') === 'Admin')
-        ? <span className='welcome'>Welcome Admin</span> 
-        : <span className='welcome'>Welcome {getCookie('name')}</span>}
+        ? <span className='welcome uppercase'>Welcome Admin</span> 
+        : <span className='welcome uppercase'>Welcome {getCookie('name')}</span>}
         <Link to="/logout" className='btn danger logout'>Logout</Link>
       </div>
     );
