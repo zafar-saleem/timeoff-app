@@ -37,8 +37,13 @@
 
 .welcome {
   position: absolute;
+  width: 7.5em;
   top: 5.2em;
   right: 9.7em;
+}
+
+.welcome .link {
+  margin-left: .4em;
 }
 
 .logout {

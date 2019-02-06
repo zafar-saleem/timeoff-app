@@ -17,7 +17,6 @@ class HeaderComponent extends Component {
           <li><Link className='navlink active' to="/admin/dashboard">Dashboard</Link></li>
           <li><Link className='navlink' to="/admin/list">Employees</Link></li>
           <li><Link className='navlink' to="/admin/new">Add Employee</Link></li>
-          <li><Link className='navlink' to="/admin/profile">Profile</Link></li>
         </ul>
         :
         <ul className='navbar'>
@@ -26,7 +25,7 @@ class HeaderComponent extends Component {
         </ul>
         }
         {(getCookie('role') === 'Admin')
-        ? <span className='welcome uppercase'>Welcome Admin</span> 
+        ? <span className='welcome uppercase'>Welcome <Link to="/admin/profile" className="link success">Admin</Link></span> 
         : <span className='welcome uppercase'>Welcome {getCookie('name')}</span>}
         <Link to="/logout" className='btn danger logout'>Logout</Link>
       </div>
