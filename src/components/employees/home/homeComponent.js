@@ -131,7 +131,7 @@ class HomeComponent extends Component {
         <DialogComponent
           warning={this.state.warning}
           message={this.state.dialogMessage}
-          deleteVacation={this.deleteVacation.bind(this)}
+          callback={this.deleteVacation.bind(this)}
         />
         <div className='home'>
         <div>

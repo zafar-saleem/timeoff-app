@@ -11,13 +11,16 @@ import {
 
 import HeaderComponent from '../../commons/headerComponent';
 import EmployeeDetailsView from './employeeDetailsView';
+import DialogComponent from '../../commons/dialog/dialogComponent';
 
 import { getCookie } from '../../../utils/cookies';
 
 class EmployeeDetailsComponent extends Component {
   state = {
     isSuccess: false,
-    message: ''
+    message: '',
+    warning: false,
+    dialogMessage: ''
   }
 
   constructor(props) {
@@ -34,15 +37,31 @@ class EmployeeDetailsComponent extends Component {
   }
 
   onHandleDeactivate = (event) => {
-    const data = {
-      admin: {
-        access: getCookie('role'),
-        id: getCookie('id')
-      },
-      id: this.props.response.details.response._id
-    };
+    this.setState({
+      warning: true,
+      dialogMessage: `Are you sure you want to deactivate ${this.props.response.details.response.name}?`
+    });
+  }
 
-    this.props.dispatch(employeeDeactivateAction(data));
+  handleDeactivate = (event) => {
+    const response = event.target.innerHTML.toLowerCase();
+
+    if (response === 'yes') {
+      const data = {
+        admin: {
+          access: getCookie('role'),
+          id: getCookie('id')
+        },
+        id: this.props.response.details.response._id
+      };
+
+      this.props.dispatch(employeeDeactivateAction(data));
+    }
+
+    this.setState({
+      warning: false,
+      dialogMessage: ''
+    });
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -71,6 +90,11 @@ class EmployeeDetailsComponent extends Component {
     return (
       <div>
         <HeaderComponent />
+        <DialogComponent
+          warning={this.state.warning}
+          message={this.state.dialogMessage}
+          callback={this.handleDeactivate.bind(this)}
+        />
         <EmployeeDetailsView 
           success={this.state.isSuccess}
           message={this.state.message}
