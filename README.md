@@ -1,7 +1,3 @@
-<a class="twitter-share-button"
-  href="https://twitter.com/intent/tweet?text=TimeOff%20project,%20an%20easy%20and%20convenient%20way%20to%20set%20vacations.https://github.com/zafar-saleem/timeoff-app">
-Tweet</a>
-
 <p align="center">
   <img src="screenshots/logo.png" />
 </p>
