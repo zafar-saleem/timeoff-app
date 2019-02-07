@@ -7,7 +7,7 @@
 }
 
 .employees table thead {
-  padding: 1em 0;
+  /*padding: 1em 0;*/
   display: block;
   color: #ffffff;
   background: #afafaf;
@@ -16,6 +16,20 @@
 .employees table thead tr th {
   width: 350px;
   text-align: left;
+}
+
+.employees table thead tr th a {
+  padding: 0em;
+  padding-right: 10em;
+  padding-top: 1em;
+  display: block;
+  padding-bottom: 1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.employees table thead tr th a:active {
+  color: #ffffff;
 }
 
 .employees table tbody {

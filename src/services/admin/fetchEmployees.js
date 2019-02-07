@@ -4,8 +4,10 @@ import { baseurl } from '../../utils/baseurl';
 export const fetchEmployeesService = (request) => {
   let id = request.data.id;
   let access = request.data.access;
+  let order = request.data.order;
+  let sortBy = request.data.sortBy;
 
-  const FETCH_EMPLOYEES = baseurl(`admin/list?id=${id}&access=${access}`);
+  const FETCH_EMPLOYEES = baseurl(`admin/list?id=${id}&access=${access}&order=${order}&sortBy=${sortBy}`);
 
   const parameters = {
     method: 'GET',

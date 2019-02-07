@@ -25,9 +25,9 @@ const EmployeesListView = (props) => {
         <thead>
           <tr>
             <th className='tb-check'></th>
-            <th>Username</th>
-            <th>Name</th>
-            <th>Position</th>
+            <th><a href='#' onClick={props.onSortHandle}>Username</a></th>
+            <th><a href='#' onClick={props.onSortHandle}>Name</a></th>
+            <th><a href='#' onClick={props.onSortHandle}>Position</a></th>
           </tr>
         </thead>
         <tbody>

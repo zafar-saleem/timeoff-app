@@ -10,17 +10,19 @@ class EmplyeesListComponent extends Component {
 
   state = {
     employees: undefined,
-    search: ''
+    search: '',
+    data: {
+      id: getCookie('id'),
+      access: getCookie('role'),
+      order: 'desc',
+      sortBy: 'username'
+    }
   }
 
   constructor(props) {
     super(props);
-    const data = {
-      id: getCookie('id'),
-      access: getCookie('role')
-    };
 
-    this.props.dispatch(employeesListAction(data));
+    this.props.dispatch(employeesListAction(this.state.data));
   }
 
   handleOnChange = (event) => {
@@ -35,6 +37,34 @@ class EmplyeesListComponent extends Component {
     } else {
       this.setState({ search: '' });
     }
+  }
+
+  onSortHandle = (event) => {
+    event.preventDefault();
+    
+    const sortBy = event.target.innerHTML.toLowerCase();
+
+    if (this.state.data.order === 'asc') {
+      this.setState({
+        data: {
+          id: getCookie('id'),
+          access: getCookie('role'),
+          order: 'desc',
+          sortBy: sortBy
+        }
+      });
+    } else {
+      this.setState({
+        data: {
+          id: getCookie('id'),
+          access: getCookie('role'),
+          order: 'asc',
+          sortBy: sortBy
+        }
+      });
+    }
+
+    this.props.dispatch(employeesListAction(this.state.data));
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -62,6 +92,7 @@ class EmplyeesListComponent extends Component {
         <EmployeesListView
           list={this.state.employees}
           handleOnChange={this.handleOnChange.bind(this)}
+          onSortHandle={this.onSortHandle.bind(this)}
         />
       </div>
     );
