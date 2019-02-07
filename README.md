@@ -32,3 +32,10 @@ That is right, you can control any person account you want as an Admin.
 
 # Server Side of this project
 This is the UI side of TimeOff. In order to use this UI you will need to setup it server side which can be found on this link [TimeOff Serverside](https://github.com/zafar-saleem/timeoff-server).
+
+# Technology Stack
+For development team to set this project up for their companies use I provide the list of technologies used in this project.
+* React
+* Redux
+* React Router
+* Redux Saga
