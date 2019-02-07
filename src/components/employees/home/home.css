@@ -49,3 +49,11 @@
 .home .message {
   margin-left: 0;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import moment from 'moment';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css';
-
 import { formatDate, parseDate } from 'react-day-picker/moment';
 
 import HeaderComponent from '../../commons/headerComponent';
+import DialogComponent from '../../commons/dialog/dialogComponent';
+
 import HomeView from './homeView';
 import {
   setVacationActions,
@@ -16,6 +17,7 @@ import {
 
 import { getCookie } from '../../../utils/cookies';
 
+import 'react-day-picker/lib/style.css';
 import './home.css';
 
 class HomeComponent extends Component {
@@ -24,7 +26,10 @@ class HomeComponent extends Component {
     to: undefined,
     isSuccess: false,
     message: '',
-    list: []
+    list: [],
+    warning: false,
+    dialogMessage: '',
+    id: ''
   }
 
   to = null;
@@ -63,26 +68,45 @@ class HomeComponent extends Component {
     this.setState({ to: to });
   }
 
-  onHandleDelete = (id) => {
-    this.props.dispatch(deleteVacationAction({
+  onHandleDelete = (id, event) => {
+    event.preventDefault();
+    this.setState({
       id: id,
-      employeeID: getCookie('id')
-    }));
-    
+      warning: true,
+      dialogMessage: 'Are you sure you want to delete this vacations?'
+    });
+  }
+
+  deleteVacation = (event) => {
+    const response = event.target.innerHTML.toLowerCase();
+
+    if (response === 'yes') {
+      this.props.dispatch(deleteVacationAction({
+        id: this.state.id,
+        employeeID: getCookie('id')
+      }));
+    }
+
+    this.setState({
+      warning: false
+    });
+
+    return <Redirect to='employee/home' />
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.vacations.hasOwnProperty('response')) {
+    if (nextProps.vacations.hasOwnProperty('response') && nextProps.fetchVacations.hasOwnProperty('response')) {
       if (nextProps.vacations.response.success !== prevState.isSuccess) {
         return {
           isSuccess: nextProps.vacations.response.success,
           message: nextProps.vacations.response.message,
-          employee: nextProps.details.response
+          list: nextProps.fetchVacations.response
         };
       } else {
         return {
           isSuccess: nextProps.vacations.response.success,
-          message: nextProps.vacations.response.message
+          message: nextProps.vacations.response.message,
+          list: nextProps.fetchVacations.response
         };
       }
     } else {
@@ -99,9 +123,16 @@ class HomeComponent extends Component {
     const today = new Date();
     const modifiers = { start: from, end: to };
 
+    console.log(this.state);
+
     return (
       <div>
         <HeaderComponent />
+        <DialogComponent
+          warning={this.state.warning}
+          message={this.state.dialogMessage}
+          deleteVacation={this.deleteVacation.bind(this)}
+        />
         <div className='home'>
         <div>
           {
