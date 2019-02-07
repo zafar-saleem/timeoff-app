@@ -1,4 +1,6 @@
-![Screenshot](screenshots/logo.png)
+<p align="center">
+  <img src="screenshots/logo.png" />
+</p>
 
 TimeOff is an application that allows companies and organisations to allow their employees to set vacations before they take their time off. 
 TimeOff is an easy to use vacation setter with just few clicks. 
