@@ -29,3 +29,6 @@ List of all employees are just one click away. Employees tab shows you all emplo
 ## You have all the luxury to control any account.
 That is right, you can control any person account you want as an Admin.
 ![Screenshot](screenshots/control.png)
+
+# Server Side of this project
+This is the UI side of TimeOff. In order to use this UI you will need to setup it server side which can be found on this link [TimeOff Serverside](https://github.com/zafar-saleem/timeoff-server).
