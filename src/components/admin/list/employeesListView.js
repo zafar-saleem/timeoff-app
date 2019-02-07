@@ -33,10 +33,10 @@ const EmployeesListView = (props) => {
           {props.list.map(li => (  
             <tr key={li._id}>
               <td>
-                <Link className='name uppercase' to={`/employee/details/${li._id}`}><b>{li.name}</b></Link>
+                <Link className='name uppercase' to={`/employee/details/${li._id}`}>{li.name}</Link>
               </td>
               <td>
-                <Link className='name' to={`/employee/details/${li._id}`}><b>{li.username}</b></Link>
+                <Link className='name' to={`/employee/details/${li._id}`}>{li.username}</Link>
               </td>
               <td className='uppercase'>
                 {li.position}
