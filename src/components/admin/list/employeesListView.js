@@ -24,8 +24,8 @@ const EmployeesListView = (props) => {
       <table>
         <thead>
           <tr>
-            <th><a href='#' onClick={props.onSortHandle}>Username</a></th>
-            <th><a href='#' onClick={props.onSortHandle} className='padding'>Name</a></th>
+            <th><a href='#' onClick={props.onSortHandle}>Name</a></th>
+            <th><a href='#' onClick={props.onSortHandle} className='padding'>Username</a></th>
             <th><a href='#' onClick={props.onSortHandle} className='padding width'>Position</a></th>
           </tr>
         </thead>
@@ -33,10 +33,10 @@ const EmployeesListView = (props) => {
           {props.list.map(li => (  
             <tr key={li._id}>
               <td>
-                <Link className='name' to={`/employee/details/${li._id}`}><b>{li.username}</b></Link>
+                <Link className='name uppercase' to={`/employee/details/${li._id}`}><b>{li.name}</b></Link>
               </td>
               <td>
-                <Link className='name uppercase' to={`/employee/details/${li._id}`}><b>{li.name}</b></Link>
+                <Link className='name' to={`/employee/details/${li._id}`}><b>{li.username}</b></Link>
               </td>
               <td className='uppercase'>
                 {li.position}
