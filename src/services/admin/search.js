@@ -2,8 +2,6 @@ import { getCookie } from '../../utils/cookies';
 import { baseurl } from '../../utils/baseurl';
 
 export const searchService = (request) => {
-  let search = request.search;
-
   const SEARCH_ENDPOINT = baseurl('admin/search');
 
   const parameters = {

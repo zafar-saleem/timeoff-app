@@ -1,8 +1,6 @@
 import { getCookie } from '../../utils/cookies';
 import { baseurl } from '../../utils/baseurl';
 
-const baseUrl = 'http://localhost:3000/api/v1/admin';
-
 export const deactivateService = (request) => {
   const DEACTIVATE_ENDPOINT = baseurl('admin/deactivate');
 

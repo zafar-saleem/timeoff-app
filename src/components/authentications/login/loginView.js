@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { checkCookie } from '../../../utils/cookies';
 
@@ -6,7 +6,7 @@ import './login.css';
 
 const LoginView = (props) => (
   <div className='login-container'>
-    <a href='/' className='logo-login'></a>
+    <Link to='/' className='logo-login'></Link>
     {(checkCookie() !== null) ? <Redirect to='/admin/dashboard' /> : null}
     {(!props.isSuccess) ? <div className='error'>{props.message}</div> : null}
     <form onSubmit={props.handleLogin} className='login-form'>

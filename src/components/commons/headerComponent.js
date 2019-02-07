@@ -10,7 +10,7 @@ class HeaderComponent extends Component {
   render() {
     return (
       <div className='header-container'>
-        <a href='/' className='logo'></a>
+        <Link to='/' className='logo'></Link>
         {(getCookie('role') === 'Admin')
         ?
         <ul className='navbar'>

@@ -13,7 +13,6 @@ import DashboardComponent from '../components/admin/dashboard/dashboardComponent
 import AdminProfileComponent from '../components/admin/profile/adminProfileComponent';
 import AdminUpdateComponent from '../components/admin/profile/update/adminUpdateComponent';
 
-import HeaderComponent from '../components/commons/headerComponent';
 import EmployeesListComponent from '../components/admin/list/employeesListComponent';
 import AddEmployeeComponent from '../components/admin/addEmployee/addEmployeeComponent';
 
@@ -21,8 +20,6 @@ import EmployeeDetailsComponent from '../components/employees/details/employeeDe
 import EmployeeDetailsUpdateComponent from '../components/employees/details/employeeDetailsUpdateComponent';
 import HomeComponent from '../components/employees/home/homeComponent';
 import ProfileComponent from '../components/employees/profile/profileComponent';
-
-import { getCookie } from '../utils/cookies';
 
 class App extends Component {
   render() {

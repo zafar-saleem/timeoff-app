@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './employees.css';
 
 const EmployeesListView = (props) => {
-  if (props.list == undefined) {
+  if (props.list === undefined) {
     return null;
   }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { setCookie, getCookie } from '../../../utils/cookies';
+import { setCookie } from '../../../utils/cookies';
 import { loginUserAction } from '../../../actions/authenticationActions';
 import LoginView from './loginView';
 

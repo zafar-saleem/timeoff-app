@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getCookie } from '../../../utils/cookies';
-
-import AdminUpdateComponent from './update/adminUpdateComponent';
 
 const AdminProfileView = ({ profile, match }) => (
   <div className='container'>

@@ -18,7 +18,7 @@ class LogoutComponent extends Component {
     setCookie('name', getCookie('name'), 0);
     setCookie('id', getCookie('id'), 0);
 
-    if (getCookie('token') == null || getCookie('token') == '') {
+    if (getCookie('token') === null || getCookie('token') === '') {
       return <Redirect to='/' />;
     }
     

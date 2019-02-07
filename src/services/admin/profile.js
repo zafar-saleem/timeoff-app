@@ -1,8 +1,6 @@
 import { getCookie } from '../../utils/cookies';
 import { baseurl } from '../../utils/baseurl';
 
-const baseUrl = 'http://localhost:3000/api/v1/admin/profile';
-
 export const fetchAdminProfileService = (request) => {
   const FETCH_PROFILE = baseurl(`admin/profile?id=${request.data.id}&access=${request.data.access}`);
 
