@@ -14,18 +14,26 @@
 }
 
 .employees table thead tr th {
-  width: 350px;
+  width: 23em;
   text-align: left;
 }
 
 .employees table thead tr th a {
-  padding: 0em;
-  padding-right: 10em;
-  padding-top: 1em;
   display: block;
+  /*padding-right: 10em;*/
+  padding-top: 1em;
+  padding-left: 2em;
   padding-bottom: 1em;
   color: #ffffff;
   text-decoration: none;
+}
+
+.employees table thead tr th a.padding {
+  padding-left: 5em;
+}
+
+.employees table thead tr th a.width {
+  padding-left: 8em;
 }
 
 .employees table thead tr th a:active {
@@ -48,6 +56,7 @@
 
 .employees table tbody tr td {
   width: 350px;
+  padding-left: 2em;
   text-align: left;
 }
 

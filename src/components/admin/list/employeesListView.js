@@ -24,16 +24,14 @@ const EmployeesListView = (props) => {
       <table>
         <thead>
           <tr>
-            <th className='tb-check'></th>
             <th><a href='#' onClick={props.onSortHandle}>Username</a></th>
-            <th><a href='#' onClick={props.onSortHandle}>Name</a></th>
-            <th><a href='#' onClick={props.onSortHandle}>Position</a></th>
+            <th><a href='#' onClick={props.onSortHandle} className='padding'>Name</a></th>
+            <th><a href='#' onClick={props.onSortHandle} className='padding width'>Position</a></th>
           </tr>
         </thead>
         <tbody>
           {props.list.map(li => (  
             <tr key={li._id}>
-              <td className='tb-check'><input type='checkbox' /></td>
               <td>
                 <Link className='name' to={`/employee/details/${li._id}`}><b>{li.username}</b></Link>
               </td>
