@@ -1,5 +1,5 @@
 .employees {
-  padding: 3em 10em 5em 5em;
+  padding: 5em 10em 5em 5em;
 }
 
 .employees table {
@@ -83,10 +83,15 @@
 }
 
 .employees .employee-search {
+  position: absolute;
   width: 20em;
+  right: 13em;
+  top: 16em;
   padding: 1em 1.2em;
   margin-bottom: .3em;
   border-radius: .2em;
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
   border: 1px solid #cbcccd;
   background-color: #d9dbdc;
 }
