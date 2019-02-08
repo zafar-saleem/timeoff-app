@@ -46,3 +46,6 @@ For development team to set this project up for their companies use I provide th
 
 # Design
 The design(PSDs) could be found for this project on my [Uplab Profile](https://www.uplabs.com/posts/timeoff-to-schedule-vacations).
+
+# Contact
+timeoff.vacations@gmail.com
