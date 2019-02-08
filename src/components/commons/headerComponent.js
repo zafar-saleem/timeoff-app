@@ -7,6 +7,10 @@ import './header.css';
 
 class HeaderComponent extends Component {
 
+  componentDidMount(){
+    document.title = 'TimeOff';
+  }
+
   render() {
     return (
       <div className='header-container'>

@@ -12,6 +12,10 @@ class LoginComponent extends Component {
     message: ''
   };
 
+  componentDidMount(){
+    document.title = 'TimeOff';
+  }
+
   onHandleLogin = (event) => {
     event.preventDefault();
 
