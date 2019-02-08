@@ -123,8 +123,6 @@ class HomeComponent extends Component {
     const today = new Date();
     const modifiers = { start: from, end: to };
 
-    console.log(this.state);
-
     return (
       <div>
         <HeaderComponent />
