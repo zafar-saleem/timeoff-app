@@ -19,7 +19,7 @@ const EmployeeDetailsUpdateView = (props) => (
       </div>
       <div>
         <label>Password</label>
-        <input type="password" name="password" className="fields" placeholder="Enter old or new password" />
+        <input type="password" name="password" className="fields" placeholder="Enter old or new password (Optional)" />
       </div>
       <div>
         <label>Role</label>
