@@ -44,6 +44,9 @@ For development team to set this project up for their companies use I provide th
 * React Router
 * Redux Saga
 
+# Build for production
+To build this project for production. Run `npm run build` command inside timeoff-app folder and it will generate the production ready project inside build directory.
+
 # Design
 The design(PSDs) could be found for this project on my [Uplab Profile](https://www.uplabs.com/posts/timeoff-to-schedule-vacations).
 
