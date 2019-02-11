@@ -12,6 +12,10 @@ const AdminUpdateView = ({profile, handleUpdateAdmin, success, message}) => (
         <input type="text" name="username" defaultValue={profile.username} className="fields" />
       </div>
       <div>
+        <label>Email</label>
+        <input type="email" name="username" defaultValue={profile.email} className="fields" />
+      </div>
+      <div>
         <label>Role</label>
         {(getCookie('role') === 'Admin')
           ?
