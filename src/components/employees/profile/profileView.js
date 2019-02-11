@@ -13,6 +13,9 @@ const ProfileView = ({employee}) => (
             <th>Name</th><td className='uppercase'>{employee.name}</td>
           </tr>
           <tr>
+            <th>Email</th><td className=''>{employee.email}</td>
+          </tr>
+          <tr>
             <th>Position</th><td className='uppercase'>{employee.position}</td>
           </tr>
           <tr>
