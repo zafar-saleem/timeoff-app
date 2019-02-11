@@ -8,7 +8,7 @@ export const updateAdminProfileService = (request) => {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': getCookie('token')
+      'Authorization': getCookie('timeoff-token')
     },
     body: JSON.stringify(request.data)
   };

@@ -8,7 +8,7 @@ export const deactivateService = (request) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': getCookie('token')
+      'Authorization': getCookie('timeoff-token')
     },
     body: JSON.stringify(request.id)
   };

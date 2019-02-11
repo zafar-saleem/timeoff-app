@@ -8,7 +8,7 @@ export const fetchOnlineEmployeesService = () => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': getCookie('token')
+      'Authorization': getCookie('timeoff-token')
     }
   };
 

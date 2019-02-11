@@ -8,7 +8,7 @@ export const deleteVacationService = (request) => {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': getCookie('token')
+      'Authorization': getCookie('timeoff-token')
     },
     body: JSON.stringify(request.id)
   };

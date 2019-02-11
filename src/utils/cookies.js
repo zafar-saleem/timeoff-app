@@ -23,7 +23,7 @@ export function getCookie(cname) {
 }
 
 export function checkCookie() {
-  let user = getCookie('token');
+  let user = getCookie('timeoff-token');
   if (user !== '') {
     return user;
   } else {

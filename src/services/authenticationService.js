@@ -62,3 +62,27 @@ export const logoutUserService = (request) => {
       return error;
     });
 };
+
+export const forgotPasswordService = (request) => {
+  const FORGOT_ENDPOINT = baseurl('forgot');
+
+  const parameters = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(request.email)
+  };
+
+  return fetch(FORGOT_ENDPOINT, parameters)
+    .then(response => {
+      return response.json();
+    })
+    .then(json => {
+      console.log(json);
+      return json;
+    })
+    .catch(error => {
+      return error;
+    });
+};
