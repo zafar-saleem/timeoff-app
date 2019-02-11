@@ -26,6 +26,8 @@
 
 form {
   width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
 }
 
 .login-form .btn.success {

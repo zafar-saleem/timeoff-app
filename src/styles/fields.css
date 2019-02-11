@@ -1,5 +1,7 @@
 .fields {
   width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
   padding: 1em 1.5em;
   margin-bottom: .3em;
   border-radius: .2em;
