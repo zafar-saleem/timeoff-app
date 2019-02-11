@@ -1,3 +1,7 @@
 .profile {
   padding: 3em 10em 5em 5em;
 }
+
+.profile .link {
+  position: relative;
+}
