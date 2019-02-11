@@ -10,6 +10,10 @@ const EmployeeDetailsUpdateView = (props) => (
         <input type="text" name="name" defaultValue={props.employee.name} className="fields uppercase" />
       </div>
       <div>
+        <label>Email</label>
+        <input type="email" name="email" defaultValue={props.employee.email} className="fields" />
+      </div>
+      <div>
         <label>Position</label>
         <input type="text" name="position" defaultValue={props.employee.position} className="fields uppercase" />
       </div>

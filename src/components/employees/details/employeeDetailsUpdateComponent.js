@@ -27,11 +27,12 @@ class EmployeeDetailsUpdateComponent extends Component {
     let position = event.target.position.value;
     let username = event.target.username.value;
     let password = event.target.password.value;
+    let email = event.target.email.value;
     let role = event.target.role.value;
     let _id = this.props.response.details.response._id;
 
     const data = {
-      name, position, username, password, role, _id,
+      name, position, username, password, role, _id, email,
       admin: {
         access: getCookie('role'),
         id: getCookie('id')
