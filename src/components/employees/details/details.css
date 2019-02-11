@@ -30,6 +30,10 @@
   margin-top: 50px;
 }
 
+.details .edit-link .link {
+  position: relative;
+}
+
 .update {
   padding: 3em 10em 5em 5em;
 }
