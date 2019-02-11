@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { getCookie } from '../../../utils/cookies';
 
+import './profile.css';
+
 const AdminProfileView = ({ profile, match }) => (
-  <div className='container'>
+  <div className='container profile'>
     <table className='table'>
       <tbody>
         <tr>
