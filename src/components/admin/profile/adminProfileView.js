@@ -13,6 +13,9 @@ const AdminProfileView = ({ profile, match }) => (
           <th>Username</th><td>{profile.username}</td>
         </tr>
         <tr>
+          <th>Email</th><td>{profile.email}</td>
+        </tr>
+        <tr>
           <th></th><td><Link className='link success uppercase' to={`/profile/update/${getCookie('id')}`}>Edit</Link></td>
         </tr>
       </tbody>
