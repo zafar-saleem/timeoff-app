@@ -20,15 +20,16 @@ class NewEmployeeComponent extends Component {
     let role = event.target.role.value;
     let username = event.target.username.value;
     let password = event.target.password.value;
+    let email = event.target.email.value;
 
     const data = {
-      name, role, position, username, password,
+      name, role, position, username, password, email,
       admin: {
         access: getCookie('role'),
         id: getCookie('id')
       }
     };
-
+    
     this.props.dispatch(saveEmployeeAction(data));
   }
 

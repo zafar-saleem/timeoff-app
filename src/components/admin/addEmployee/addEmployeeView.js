@@ -23,6 +23,10 @@ const AddEmployeeView = (props) => (
         <input type="password" name="password" className="fields" />
       </div>
       <div>
+        <label>Email</label>
+        <input type="email" name="email" className="fields" />
+      </div>
+      <div>
         <label>Role</label>
         <select className="dropdown" name="role">
           <option>Select</option>
