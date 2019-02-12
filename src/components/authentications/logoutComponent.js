@@ -13,7 +13,7 @@ class LogoutComponent extends Component {
   }
 
   render() {
-    setCookie('token', getCookie('token'), 0);
+    setCookie('timeoff-token', getCookie('token'), 0);
     setCookie('role', getCookie('role'), 0);
     setCookie('name', getCookie('name'), 0);
     setCookie('id', getCookie('id'), 0);

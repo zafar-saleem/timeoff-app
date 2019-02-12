@@ -20,3 +20,10 @@ export const logoutAction = (user) => {
     user
   }
 };
+
+export const forgotPasswordAction = (email) => {
+  return {
+    type: types.FORGOT_PASSWORD,
+    email
+  }
+};

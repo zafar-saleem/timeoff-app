@@ -19,6 +19,9 @@ const LoginView = (props) => (
       <div>
         <button className='btn success'>Login</button>
       </div>
+      <p className='forgot-password'>
+         <Link to='forgot' className='link success'> Forgot your password?</Link>
+      </p>
     </form>
   </div>
 );

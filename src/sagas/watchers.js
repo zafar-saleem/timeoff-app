@@ -1,5 +1,10 @@
 import { takeLatest } from 'redux-saga/effects';
-import { registerSaga, loginSaga, logoutSaga } from './authenticationSaga';
+import {
+  registerSaga,
+  loginSaga,
+  logoutSaga,
+  forgotPasswordSaga
+} from './authenticationSaga';
 
 import { search } from './admin/search';
 import { addEmployeeSaga } from './admin/addEmployee';
@@ -23,6 +28,7 @@ import * as types from '../actions';
 export default function* watchUserAuthentication() {
   yield takeLatest(types.REGISTER_USER, registerSaga);
   yield takeLatest(types.LOGIN_USER, loginSaga);
+  yield takeLatest(types.FORGOT_PASSWORD, forgotPasswordSaga);
   yield takeLatest(types.LOGOUT_USER, logoutSaga);
   yield takeLatest(types.ADD_EMPLOYEE, addEmployeeSaga);
   yield takeLatest(types.FETCH_EMPLOYEES, fetchEmployees);

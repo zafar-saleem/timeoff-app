@@ -34,3 +34,9 @@ form {
   right: 0;
   margin-top: .3em;
 }
+
+.login-container .forgot-password {
+  font-size: 0.8em;
+  /*margin-top: 4em;*/
+  color: #999999;
+}

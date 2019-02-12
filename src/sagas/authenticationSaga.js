@@ -2,7 +2,8 @@ import { put, call } from 'redux-saga/effects';
 import {
   registerUserService,
   loginUserService,
-  logoutUserService
+  logoutUserService,
+  forgotPasswordService
 } from '../services/authenticationService';
 
 import * as types from '../actions'
@@ -37,5 +38,16 @@ export function* logoutSaga(payload) {
     ];
   } catch(error) {
     yield put({ type: types.LOGOUT_USER_SUCCESS, error });
+  }
+}
+
+export function* forgotPasswordSaga(payload) {
+  try {
+    const response = yield call(forgotPasswordService, payload);
+    yield [
+      put({ type: types.FORGOT_PASSWORD_SUCCESS, response })
+    ];
+  } catch(error) {
+    yield put({ type: types.FORGOT_PASSWORD_SUCCESS, error });
   }
 }

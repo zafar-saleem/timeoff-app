@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import register from './registerReducer';
 import login from './loginReducer';
+import forgot from './forgotReducer';
 
 import admin from './admin/adminReducer';
 import list from './admin/listReducer';
@@ -21,6 +22,7 @@ import update from './common/updateReducer';
 const rootReducer = combineReducers({
   register,
   login,
+  forgot,
   admin,
   list,
   details,
