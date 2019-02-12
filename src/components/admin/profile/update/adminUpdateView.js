@@ -13,7 +13,7 @@ const AdminUpdateView = ({profile, handleUpdateAdmin, success, message}) => (
       </div>
       <div>
         <label>Email</label>
-        <input type="email" name="username" defaultValue={profile.email} className="fields" />
+        <input type="email" name="email" defaultValue={profile.email} className="fields" />
       </div>
       <div>
         <label>Role</label>

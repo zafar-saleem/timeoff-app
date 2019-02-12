@@ -19,6 +19,7 @@ class AdminUpdateComponent extends Component {
     event.preventDefault();
     const data = {
       username: event.target.username.value,
+      email: event.target.email.value,
       role: event.target.role.value,
       password: event.target.password.value,
       access: getCookie('role'),
