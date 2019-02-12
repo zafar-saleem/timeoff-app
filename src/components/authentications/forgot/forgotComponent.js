@@ -41,7 +41,6 @@ class ForgotComponent extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className='login-container forgot'>
         <div className={(this.state.success) ? 'error success' : 'error'}>{this.state.message}</div>
