@@ -8,6 +8,7 @@ import {
 import PrivateRoute from './privateRoute';
 import LoginComponent from '../components/authentications/login/loginComponent';
 import RegisterComponent from '../components/authentications/register/registerComponent';
+import ForgotComponent from '../components/authentications/forgot/forgotComponent';
 import LogoutComponent from '../components/authentications/logoutComponent';
 import DashboardComponent from '../components/admin/dashboard/dashboardComponent';
 import AdminProfileComponent from '../components/admin/profile/adminProfileComponent';
@@ -20,6 +21,7 @@ import EmployeeDetailsComponent from '../components/employees/details/employeeDe
 import EmployeeDetailsUpdateComponent from '../components/employees/details/employeeDetailsUpdateComponent';
 import HomeComponent from '../components/employees/home/homeComponent';
 import ProfileComponent from '../components/employees/profile/profileComponent';
+import NotFoundComponent from '../components/notFoundComponent';
 
 class App extends Component {
   render() {
@@ -30,6 +32,7 @@ class App extends Component {
             <Route path='/' exact={true} component={LoginComponent} />
             <Route path='/login' component={LoginComponent} />
             <Route path='/register' component={RegisterComponent} />
+            <Route path='/forgot' component={ForgotComponent} />
             <PrivateRoute path='/logout' component={LogoutComponent} />
             <PrivateRoute path='/admin/dashboard' component={DashboardComponent} />
             <PrivateRoute path='/admin/list' component={EmployeesListComponent} />
@@ -41,6 +44,8 @@ class App extends Component {
             <PrivateRoute path='/employee/update/:id' component={EmployeeDetailsUpdateComponent} />
             <PrivateRoute path='/employee/home' component={HomeComponent} />
             <PrivateRoute path='/employee/profile' component={ProfileComponent} />
+
+            <Route component={NotFoundComponent} />
           </Switch>
         </div>
       </BrowserRouter>
