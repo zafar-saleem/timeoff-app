@@ -37,6 +37,8 @@ export const loginUserService = (request) => {
     })
     .then(json => {
       return json;
+    }).catch(error => {
+      return error;
     });
 };
 
