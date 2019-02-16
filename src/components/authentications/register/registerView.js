@@ -11,6 +11,10 @@ const RegisterView = (props) => (
         <input type="text" name="name" />
       </div>
       <div>
+        <label>Email</label>
+        <input type="email" name="email" />
+      </div>
+      <div>
         <label>Username</label>
         <input type="text" name="username" />
       </div>

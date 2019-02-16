@@ -17,9 +17,10 @@ class RegisterComponent extends Component {
     let name = event.target.name.value;
     let username = event.target.username.value;
     let password = event.target.password.value;
+    let email = event.target.email.value;
 
     const data = {
-      name, username, password
+      name, username, password, email
     };
 
     this.props.dispatch(registerUserAction(data));
