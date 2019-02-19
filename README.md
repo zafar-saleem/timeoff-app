@@ -49,6 +49,9 @@ For development team to set this project up for their companies use I provide th
 # Build for production
 To build this project for production. Run `npm run build` command inside timeoff-app folder and it will generate the production ready project inside build directory. For details visit [deployment](https://facebook.github.io/create-react-app/docs/deployment) and [creating a production build](https://facebook.github.io/create-react-app/docs/production-build).
 
+# Contributions
+In order to contribute, please open issues and make pull requests.
+
 # Design
 The design(PSDs) could be found for this project on my [Uplab Profile](https://www.uplabs.com/posts/timeoff-to-schedule-vacations).
 
