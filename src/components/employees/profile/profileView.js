@@ -5,7 +5,7 @@ import { getCookie } from '../../../utils/cookies';
 
 import './profile.css';
 
-const ProfileView = ({employee}) => (
+const ProfileView = ({ employee }) => (
   <div className='profile'>
     <table className='table'>
       <tbody>
