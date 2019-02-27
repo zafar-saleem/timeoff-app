@@ -57,6 +57,3 @@ The design(PSDs) could be found for this project on my [Uplab Profile](https://w
 
 # Contact
 timeoff.sendmail@gmail.com
-
-### Note
-If you would like to use this project for your company then please let me know and I would put your company logo on this readme.
