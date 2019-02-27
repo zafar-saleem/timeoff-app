@@ -4,6 +4,8 @@
 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Your%20employees%20want%20to%20set%20vacation%20before%20taking%20their%20time%20off?%20Here%20is%20an%20open%20source%20project%20that%20can%20help%20you%20to%20set%20their%20vacations&url=https://github.com/zafar-saleem/timeoff-app)
 
+Note: This project requires to setup server side implementation which could be found [here](https://github.com/zafar-saleem/timeoff-server)
+
 TimeOff is an application that allows companies and organisations to allow their employees to set vacations before they take their time off. 
 TimeOff is an easy to use vacation setter with just few clicks. 
 
