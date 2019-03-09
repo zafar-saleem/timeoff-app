@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class HomeView extends Component {
-
   render() {
     return (
       <tr className={(this.props.vacation.expire) ? 'expire' : ''}>
