@@ -59,3 +59,6 @@ The design(PSDs) could be found for this project on my [Uplab Profile](https://w
 
 # Contact
 timeoff.sendmail@gmail.com
+
+[facebook](https://www.facebook.com/TimeOff-325473081302189)
+[twitter](https://twitter.com/TimeOff72858529)
