@@ -12,6 +12,10 @@ const EmployeesListView = (props) => {
     return <div>{props.list.message}</div>
   }
 
+  if (props.list.length === 0) {
+    return <div className='employees-none'>No Employees Found.</div>
+  }
+
   return (
     <div className='employees'>
       <input 
