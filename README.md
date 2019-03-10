@@ -26,7 +26,7 @@ TimeOff has a minimalistic user interface and easy to follow flow. With few clic
 
 ![Screenshot](screenshots/UI.png)
 
-### Want to see past vacations
+### Want to see past vacations?
 Right on the home page, you can view set of all your vacations both active and expired.
 ![Screenshot](screenshots/Past.png)
 
@@ -44,7 +44,7 @@ That is right, you can control any person account you want as an Admin.
 ![Screenshot](screenshots/control.png)
 
 # Server Side of this project
-This is the UI side of TimeOff. In order to use this UI you will need to setup it server side which can be found on this link [TimeOff Serverside](https://github.com/zafar-saleem/timeoff-server).
+This is the UI side of TimeOff. In order to use this UI you will need to setup it's server side which can be found on this link [TimeOff Serverside](https://github.com/zafar-saleem/timeoff-server).
 
 # Technology Stack
 For development team to set this project up for their companies use I provide the list of technologies used in this project.
