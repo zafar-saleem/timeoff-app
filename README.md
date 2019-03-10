@@ -31,7 +31,7 @@ Right on the home page, you can view set of all your vacations both active and e
 ![Screenshot](screenshots/Past.png)
 
 ### View most important data right on home page
-You want to see minimalist and amazing dashboard. On dashboard you can view all the required information you need.
+You want to see minimalistic and amazing dashboard. On dashboard you can view all the required information you need.
 ![Screenshot](screenshots/dashboard.png)
 
 ### Finding and searching employees can never be so easy.
