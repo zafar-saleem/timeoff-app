@@ -26,12 +26,12 @@ TimeOff has a minimalistic user interface and easy to follow flow. With few clic
 
 ![Screenshot](screenshots/UI.png)
 
-### Want to see past vacations
+### Want to see past vacations?
 Right on the home page, you can view set of all your vacations both active and expired.
 ![Screenshot](screenshots/Past.png)
 
 ### View most important data right on home page
-You want to see minimalist and amazing dashboard. On dashboard you can view all the required information you need.
+You want to see minimalistic and amazing dashboard. On dashboard you can view all the required information you need.
 ![Screenshot](screenshots/dashboard.png)
 
 ### Finding and searching employees can never be so easy.
@@ -44,7 +44,7 @@ That is right, you can control any person account you want as an Admin.
 ![Screenshot](screenshots/control.png)
 
 # Server Side of this project
-This is the UI side of TimeOff. In order to use this UI you will need to setup it server side which can be found on this link [TimeOff Serverside](https://github.com/zafar-saleem/timeoff-server).
+This is the UI side of TimeOff. In order to use this UI you will need to setup it's server side which can be found on this link [TimeOff Serverside](https://github.com/zafar-saleem/timeoff-server).
 
 # Technology Stack
 For development team to set this project up for their companies use I provide the list of technologies used in this project.
@@ -52,6 +52,9 @@ For development team to set this project up for their companies use I provide th
 * Redux
 * React Router
 * Redux Saga
+
+# Usage
+In order to use TimeOff on local environment, `clone` this repository. CD into root folder. Run `npm install` to install all dependencies. Once done, run `npm start`.
 
 # Build for production
 To build this project for production. Run `npm run build` command inside timeoff-app folder and it will generate the production ready project inside build directory. For details visit [deployment](https://facebook.github.io/create-react-app/docs/deployment) and [creating a production build](https://facebook.github.io/create-react-app/docs/production-build).
