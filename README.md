@@ -11,7 +11,7 @@
 
 **Note**: This project requires to setup server side implementation which could be found [here](https://github.com/zafar-saleem/timeoff-server)
 
-TimeOff is an application that allows companies and organisations to allow their employees to set vacations before they take their time off. 
+TimeOff is an application that allows companies and organizations to allow their employees to set vacations before they take their time off. 
 TimeOff is an easy to use vacation setter with just few clicks. 
 
 TimeOff is completely open source meaning companies can use this project and set it up either internally or in the cloud for their use.
