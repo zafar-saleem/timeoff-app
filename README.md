@@ -66,7 +66,7 @@ To build this project for production. Run `npm run build` command inside timeoff
 In order to contribute, please open issues and make pull requests.
 
 # Design
-The design(PSDs) could be found for this project on my [Uplab Profile](https://www.uplabs.com/posts/timeoff-to-schedule-vacations).
+The design(PSDs) could be found on my [Uplab Profile](https://www.uplabs.com/posts/timeoff-to-schedule-vacations).
 
 # Contact
 timeoff.sendmail@gmail.com
