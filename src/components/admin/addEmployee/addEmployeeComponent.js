@@ -9,7 +9,13 @@ import { getCookie } from '../../../utils/cookies';
 class NewEmployeeComponent extends Component {
   state = {
     success: false,
-    message: ''
+    message: '',
+    name: '',
+    position: '',
+    role: '',
+    username: '',
+    password: '',
+    email: ''
   }
 
   onHandleAddEmployee = (event) => {
@@ -22,15 +28,28 @@ class NewEmployeeComponent extends Component {
     let password = event.target.password.value;
     let email = event.target.email.value;
 
-    const data = {
-      name, role, position, username, password, email,
-      admin: {
-        access: getCookie('role'),
-        id: getCookie('id')
-      }
-    };
-    
-    this.props.dispatch(saveEmployeeAction(data));
+    this.setState({
+      name: name,
+      position: position,
+      role: role
+    }, () => {
+      const data = {
+        name, role, position, username, password, email,
+        admin: {
+          access: getCookie('role'),
+          id: getCookie('id')
+        }
+      };
+      
+      this.props.dispatch(saveEmployeeAction(data));
+    });
+  }
+
+  handleChange(event) {
+    let name = event.target.name;
+    this.setState({
+      [name]: event.target.name.value
+    });
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -38,7 +57,13 @@ class NewEmployeeComponent extends Component {
       if (nextProps.response.admin.response.success !== prevState.success) {
         return {
           success: nextProps.response.admin.response.success,
-          message: nextProps.response.admin.response.message
+          message: nextProps.response.admin.response.message,
+          name: '',
+          position: '',
+          role: '',
+          username: '',
+          password: '',
+          email: ''
         };
       } else {
         return {
@@ -58,7 +83,14 @@ class NewEmployeeComponent extends Component {
         <AddEmployeeView
           handleAddEmployee={this.onHandleAddEmployee}
           message={this.state.message}
-          success={this.state.success} />
+          success={this.state.success}
+          name={this.state.name}
+          position={this.state.position}
+          role={this.state.role}
+          username={this.state.username}
+          password={this.state.password}
+          email={this.state.email}
+          handleChange={this.handleChange.bind(this)} />
       </div>
     );
   }
