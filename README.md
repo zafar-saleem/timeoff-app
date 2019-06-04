@@ -5,13 +5,14 @@
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Your%20employees%20want%20to%20set%20vacation%20before%20taking%20their%20time%20off?%20Here%20is%20an%20open%20source%20project%20that%20can%20help%20you%20to%20set%20their%20vacations&url=https://github.com/zafar-saleem/timeoff-app)
 
 <p align="center">
-  <a target="_blank" href='https://www.facebook.com/TimeOff-325473081302189'>facebook</a> |
-  <a target="_blank" href='https://twitter.com/TimeOff72858529'>twitter</a>
+  <a target="_blank" href='https://www.facebook.com/TimeOff-325473081302189'>Facebook</a> |
+  <a target="_blank" href='https://twitter.com/TimeOff72858529'>Twitter</a> |
+  <a target="_blank" href='https://medium.com/@zafarsaleem/how-i-built-my-own-open-source-project-a876c6d6b720'>Medium</a>
 </p>
 
-Note: This project requires to setup server side implementation which could be found [here](https://github.com/zafar-saleem/timeoff-server)
+**Note**: This project requires to setup server side implementation which could be found [here](https://github.com/zafar-saleem/timeoff-server)
 
-TimeOff is an application that allows companies and organisations to allow their employees to set vacations before they take their time off. 
+TimeOff is an application that allows companies and organizations to allow their employees to set vacations before they take their time off. 
 TimeOff is an easy to use vacation setter with just few clicks. 
 
 TimeOff is completely open source meaning companies can use this project and set it up either internally or in the cloud for their use.
@@ -56,6 +57,8 @@ For development team to set this project up for their companies use I provide th
 # Usage
 In order to use TimeOff on local environment, `clone` this repository. CD into root folder. Run `npm install` to install all dependencies. Once done, run `npm start`.
 
+![Video](screenshots/timeoff-setup.gif)
+
 # Build for production
 To build this project for production. Run `npm run build` command inside timeoff-app folder and it will generate the production ready project inside build directory. For details visit [deployment](https://facebook.github.io/create-react-app/docs/deployment) and [creating a production build](https://facebook.github.io/create-react-app/docs/production-build).
 
@@ -63,7 +66,7 @@ To build this project for production. Run `npm run build` command inside timeoff
 In order to contribute, please open issues and make pull requests.
 
 # Design
-The design(PSDs) could be found for this project on my [Uplab Profile](https://www.uplabs.com/posts/timeoff-to-schedule-vacations).
+The design(PSDs) could be found on my [Uplab Profile](https://www.uplabs.com/posts/timeoff-to-schedule-vacations).
 
 # Contact
 timeoff.sendmail@gmail.com
