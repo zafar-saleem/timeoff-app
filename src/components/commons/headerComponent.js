@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import { getCookie } from '../../utils/cookies';
 
@@ -18,14 +19,14 @@ class HeaderComponent extends Component {
         {(getCookie('role') === 'Admin')
         ?
         <ul className='navbar'>
-          <li><Link className='navlink active' to='/admin/dashboard'>Dashboard</Link></li>
-          <li><Link className='navlink' to='/admin/list'>Employees</Link></li>
-          <li><Link className='navlink' to='/admin/new'>Add Employee</Link></li>
+          <li><Link className={(window.location.pathname.split('/')[2] === 'dashboard') ? 'navlink active' : 'navlink inactive'} to='/admin/dashboard'>Dashboard</Link></li>
+          <li><Link className={(window.location.pathname.split('/')[2] === 'list') ? 'navlink active' : 'navlink inactive'} to='/admin/list'>Employees</Link></li>
+          <li><Link className={(window.location.pathname.split('/')[2] === 'new') ? 'navlink active' : 'navlink inactive'} to='/admin/new'>Add Employee</Link></li>
         </ul>
         :
         <ul className='navbar'>
-          <li><Link className='navlink active' to='/employee/home'>Home</Link></li>
-          <li><Link className='navlink' to='/employee/profile'>Profile</Link></li>
+          <li><Link className={(window.location.pathname.split('/')[2] === 'home') ? 'navlink active' : 'navlink inactive'} to='/employee/home'>Home</Link></li>
+          <li><Link className={(window.location.pathname.split('/')[2] === 'profile') ? 'navlink active' : 'navlink inactive'} to='/employee/profile'>Profile</Link></li>
         </ul>
         }
         {(getCookie('role') === 'Admin')
@@ -37,4 +38,6 @@ class HeaderComponent extends Component {
   }
 }
 
-export default HeaderComponent;
+const mapStateToProps = (state) => (state);
+
+export default connect(mapStateToProps)(HeaderComponent);
