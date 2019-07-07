@@ -8,7 +8,7 @@ import './header.css';
 
 class HeaderComponent extends Component {
 
-  componentDidMount(){
+  componentDidMount() {
     document.title = 'TimeOff';
   }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { getCookie } from '../../../utils/cookies';
+import Button from '../../commons/buttons/button';
 
 const EmployeeDetailsUpdateView = (props) => (
   <div className='update'>
@@ -39,7 +40,7 @@ const EmployeeDetailsUpdateView = (props) => (
         }
       </div>
       <div>
-        <button className='btn success'>Update</button>
+        <Button classes='btn success' buttonLabel='Update' />
       </div>
     </form>
   </div>

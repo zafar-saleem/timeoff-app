@@ -10,11 +10,13 @@
 }
 
 .btn.danger {
+  color: #ffffff;
   border: 1px solid #f5696c;
   background-color: #f68285
 }
 
 .btn.success {
+  color: #ffffff;
   border: 1px solid #55ace3;
   background-color: #64b2e3;
 }

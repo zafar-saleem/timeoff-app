@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../../commons/buttons/button';
 
 import './details.css';
 
@@ -33,9 +34,9 @@ const employeeDetailsView = ({ message, employee, success, handleDeactivate }) =
       </tbody>
     </table>
     {(employee.active !== false) ? 
-      <button className='btn danger btn-deactivate uppercase' onClick={handleDeactivate}>Deactivate {employee.name}</button>
+      <Button classes='btn danger btn-deactivate uppercase' onClick={handleDeactivate} buttonLabel={`Deactivate ${employee.name}`} />
       :
-      <button className='btn danger btn-deactivate uppercase' onClick={handleDeactivate} disabled>{employee.name} is Deactived</button>
+      <Button classes='btn danger btn-deactivate uppercase' onClick={handleDeactivate} buttonLabel={`${employee.name} is Deactived`} />
     }
   </div>
 );

@@ -16,7 +16,6 @@ code {
 }
 
 @import './styles/globals.css';
-@import './styles/buttons.css';
 @import './styles/links.css';
 @import './styles/dropdown.css';
 @import './styles/fields.css';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { checkCookie } from '../../../utils/cookies';
+import Button from '../../commons/buttons/button';
 
 import './login.css';
 
@@ -17,7 +18,7 @@ const LoginView = (props) => (
         <input type="password" name="password" placeholder="Password" className="fields" />
       </div>
       <div>
-        <button className='btn success'>Login</button>
+        <Button classes='btn success' buttonLabel='Save' />
       </div>
       <p className='forgot-password'>
          <Link to='forgot' className='link success'> Forgot your password?</Link>

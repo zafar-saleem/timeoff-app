@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../commons/buttons/button';
 
 import './add.css';
 
@@ -36,7 +37,7 @@ const AddEmployeeView = (props) => (
       </div>
       <div>
         <span className='required'>All fields are required.</span>
-        <button className="btn success">Save</button>
+        <Button classes='btn success' buttonLabel='Save' />
       </div>
     </form>
   </div>
