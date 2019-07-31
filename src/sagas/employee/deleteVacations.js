@@ -11,6 +11,6 @@ export function* deleteVacation(payload) {
       put({ type: types.DELETE_VACATION_SUCCESS, response })
     ];
   } catch (error) {
-    yield put({ type: types.DELETE_VACATION_SUCCESS, error });
+    yield put({ type: types.DELETE_VACATION_ERROR, error });
   }
 };

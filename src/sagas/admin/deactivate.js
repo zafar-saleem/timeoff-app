@@ -11,6 +11,6 @@ export function* deactivate(payload) {
       put({ type: types.DEACTIVATE_EMPLOYEE_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.DEACTIVATE_EMPLOYEE_SUCCESS, error });
+    yield put({ type: types.DEACTIVATE_EMPLOYEE_ERROR, error });
   }
 };

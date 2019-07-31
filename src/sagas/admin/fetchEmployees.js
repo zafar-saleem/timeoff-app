@@ -11,6 +11,6 @@ export function* fetchEmployees(payload) {
       put({ type: types.FETCH_EMPLOYEES_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.FETCH_EMPLOYEES_SUCCESS, error })
+    yield put({ type: types.FETCH_EMPLOYEES_ERROR, error })
   }
 }

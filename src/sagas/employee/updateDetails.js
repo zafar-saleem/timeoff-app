@@ -11,6 +11,6 @@ export function* updateEmployeeDetails(payload) {
       put({ type: types.UPDATE_EMPLOYEE_DETAILS_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.UPDATE_EMPLOYEE_DETAILS_SUCCESS, error });
+    yield put({ type: types.UPDATE_EMPLOYEE_DETAILS_ERROR, error });
   }
 };

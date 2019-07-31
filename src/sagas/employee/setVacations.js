@@ -11,6 +11,6 @@ export function* setVacations(payload) {
       put({ type: types.SET_VACATIONS_SUCCESS, response })
     ];
   } catch (error) {
-    yield put({ type: types.SET_VACATIONS_SUCCESS, error });
+    yield put({ type: types.SET_VACATIONS_ERROR, error });
   }
 };

@@ -11,6 +11,6 @@ export function* updateProfile(payload) {
       put({ type: types.UPDATE_ADMIN_PROFILE_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.UPDATE_ADMIN_PROFILE_SUCCESS, error });
+    yield put({ type: types.UPDATE_ADMIN_PROFILE_ERROR, error });
   }
 };

@@ -11,6 +11,6 @@ export function* fetchVacations(payload) {
       put({ type: types.FETCH_VACATIONS_SUCCESS, response })
     ];
   } catch (error) {
-    yield put({ type: types.FETCH_VACATIONS_SUCCESS, error });
+    yield put({ type: types.FETCH_VACATIONS_ERROR, error });
   }
 };

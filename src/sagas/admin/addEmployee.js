@@ -11,6 +11,6 @@ export function* addEmployeeSaga(payload) {
       put({ type: types.ADD_EMPLOYEE_SUCCESS, response })
     ];
   } catch (error) {
-    yield put({ type: types.ADD_EMPLOYEE_SUCCESS, error });
+    yield put({ type: types.ADD_EMPLOYEE_ERROR, error });
   }
 }

@@ -11,6 +11,6 @@ export function* fetchActivities() {
       put({ type: types.FETCH_ACTIVITIES_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.FETCH_ACTIVITIES_SUCCESS, error });
+    yield put({ type: types.FETCH_ACTIVITIES_ERROR, error });
   }
 };

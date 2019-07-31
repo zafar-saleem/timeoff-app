@@ -12,6 +12,6 @@ export function* fetchOnlineEmployees() {
     ];
 
   } catch(error) {
-    yield put({ type: types.FETCH_ONLINE_EMPLOYEES_SUCCESS, error });
+    yield put({ type: types.FETCH_ONLINE_EMPLOYEES_ERROR, error });
   }
 }

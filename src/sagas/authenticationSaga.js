@@ -37,7 +37,7 @@ export function* logoutSaga(payload) {
       put({ type: types.LOGOUT_USER_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.LOGOUT_USER_SUCCESS, error });
+    yield put({ type: types.LOGOUT_USER_ERROR, error });
   }
 }
 
@@ -48,6 +48,6 @@ export function* forgotPasswordSaga(payload) {
       put({ type: types.FORGOT_PASSWORD_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.FORGOT_PASSWORD_SUCCESS, error });
+    yield put({ type: types.FORGOT_PASSWORD_ERROR, error });
   }
 }

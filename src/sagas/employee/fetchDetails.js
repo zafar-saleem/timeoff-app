@@ -10,6 +10,6 @@ export function* fetchEmployeeDetails(payload) {
       put({ type: types.FETCH_EMPLOYEE_DETAILS_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.FETCH_EMPLOYEE_DETAILS_SUCCESS, error });
+    yield put({ type: types.FETCH_EMPLOYEE_DETAILS_ERROR, error });
   }
 };

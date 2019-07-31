@@ -11,6 +11,6 @@ export function* search(payload) {
       put({ type: types.SEARCH_EMPLOYEE_SUCCESS, response })
     ];
   } catch(error) {
-    yield put({ type: types.SEARCH_EMPLOYEE_SUCCESS, error });
+    yield put({ type: types.SEARCH_EMPLOYEE_ERROR, error });
   }
 };
